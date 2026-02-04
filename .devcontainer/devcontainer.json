@@ -1,0 +1,16 @@
+{
+    "name": "Jekyll Dev",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "forwardPorts": [4000, 35729],
+    "postStartCommand": "bundle exec jekyll serve --livereload --host 0.0.0.0",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "sissel.shopify-liquid"
+            ]
+        }
+    }
+}
