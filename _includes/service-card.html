@@ -1,0 +1,8 @@
+<div class="service-card">
+  <div class="service-card__icon" style="background: {{ include.color | default: '#E8F1FD' }};">
+    {{ include.icon }}
+  </div>
+  <h3>{{ include.title }}</h3>
+  <p>{{ include.description }}</p>
+  <a href="{{ include.url_prefix }}{{ include.url }}/" class="service-card__link">{{ include.link_text }} &rarr;</a>
+</div>

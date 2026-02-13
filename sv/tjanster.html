@@ -1,0 +1,42 @@
+---
+layout: page
+title: Tjänster
+lang: sv
+page_label: Tjänster
+subtitle: "Vi erbjuder specialiserade cybersäkerhetstjänster som täcker innovation, compliance och arkitektur."
+permalink: /sv/tjanster/
+alternate:
+  da: /tjenester/
+  en: /en/services/
+---
+
+{% assign strings = site.data.sv.strings %}
+{% assign services = site.data.sv.services %}
+
+<section class="section section--white">
+  <div class="container">
+    <div class="card-grid card-grid--2col">
+      {% for service in services %}
+      <div class="service-card">
+        <div class="service-card__icon" style="background: {{ service.color }};">
+          {{ service.icon }}
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.short }}</p>
+        <p style="font-size: 0.875rem; color: #64748B;">{{ service.tagline }}</p>
+        <a href="/sv/tjanster/{{ service.key }}/" class="service-card__link">{{ strings.services_link }} &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>{{ strings.cta_title }}</h2>
+      <p>{{ strings.cta_text }}</p>
+      <a href="/sv/kontakt/" class="btn btn-white">{{ strings.cta_button }}</a>
+    </div>
+  </div>
+</section>

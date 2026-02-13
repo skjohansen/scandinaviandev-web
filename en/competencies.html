@@ -1,0 +1,66 @@
+---
+layout: page
+title: Competencies
+lang: en
+page_label: Competencies
+subtitle: "Our expertise spans three pillars: Cybersecurity, Software Engineering and Leadership."
+permalink: /en/competencies/
+alternate:
+  da: /kompetencer/
+  sv: /sv/kompetenser/
+---
+
+{% assign strings = site.data.en.strings %}
+{% assign competencies = site.data.en.competencies %}
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <span class="pillar-badge pillar-badge--cybersecurity">{{ strings.pillar_cybersecurity }}</span>
+      <h2>{{ strings.pillar_cybersecurity }}</h2>
+    </div>
+    <div class="card-grid">
+      {% for c in competencies.cybersecurity %}
+      {% include competency-card.html title=c.title description=c.description pillar="cybersecurity" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-header">
+      <span class="pillar-badge pillar-badge--software">{{ strings.pillar_software }}</span>
+      <h2>{{ strings.pillar_software }}</h2>
+    </div>
+    <div class="card-grid">
+      {% for c in competencies.software %}
+      {% include competency-card.html title=c.title description=c.description pillar="software" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <span class="pillar-badge pillar-badge--leadership">{{ strings.pillar_leadership }}</span>
+      <h2>{{ strings.pillar_leadership }}</h2>
+    </div>
+    <div class="card-grid">
+      {% for c in competencies.leadership %}
+      {% include competency-card.html title=c.title description=c.description pillar="leadership" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>{{ strings.cta_title }}</h2>
+      <p>{{ strings.cta_text }}</p>
+      <a href="/en/contact/" class="btn btn-white">{{ strings.cta_button }}</a>
+    </div>
+  </div>
+</section>

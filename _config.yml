@@ -1,6 +1,28 @@
-title: Scandinavian Dev
-description: Welcome to Scandinavian Dev
+title: ScandinavianDev
+description: Cybersecurity consulting — Sikkerhed, Software Engineering & Lederskab
 baseurl: ""
 url: "https://scandinavian.dev"
 
 markdown: kramdown
+kramdown:
+  input: GFM
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: da
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - .devcontainer
+  - README.md
+  - CLAUDE.md

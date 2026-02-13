@@ -1,0 +1,38 @@
+{% assign strings = site.data[page.lang].strings %}
+{% assign lang = page.lang | default: "da" %}
+{% if lang == "da" %}
+  {% assign prefix = "" %}
+{% elsif lang == "en" %}
+  {% assign prefix = "/en" %}
+{% else %}
+  {% assign prefix = "/sv" %}
+{% endif %}
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="{{ prefix | append: '/' | relative_url }}" class="nav__logo">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ScandinavianDev">
+    </a>
+
+    <ul class="nav__links">
+      {% for item in strings.nav %}
+      <li><a href="{{ prefix | append: item.url | relative_url }}" class="nav__link">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <div class="nav__actions">
+      {% include language-switcher.html %}
+      <button class="nav__toggle" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav__mobile">
+    <ul>
+      {% for item in strings.nav %}
+      <li><a href="{{ prefix | append: item.url | relative_url }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,51 @@
+{% assign strings = site.data[page.lang].strings %}
+{% assign lang = page.lang | default: "da" %}
+{% if lang == "da" %}
+  {% assign prefix = "" %}
+{% elsif lang == "en" %}
+  {% assign prefix = "/en" %}
+{% else %}
+  {% assign prefix = "/sv" %}
+{% endif %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ScandinavianDev">
+        <p>{{ strings.footer_description }}</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>{{ strings.footer_nav_title }}</h4>
+        <ul>
+          {% for item in strings.nav %}
+          <li><a href="{{ prefix | append: item.url | relative_url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>{{ strings.footer_lang_title }}</h4>
+        <ul>
+          <li><a href="/">Dansk</a></li>
+          <li><a href="/en/">English</a></li>
+          <li><a href="/sv/">Svenska</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>{{ strings.footer_contact_title }}</h4>
+        <ul>
+          <li>{{ strings.contact_email }}</li>
+          <li>{{ strings.contact_phone }}</li>
+          <li>{{ strings.contact_address }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; {{ 'now' | date: '%Y' }} ScandinavianDev. {{ strings.footer_rights }}</span>
+    </div>
+  </div>
+</footer>

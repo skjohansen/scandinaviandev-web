@@ -1,0 +1,158 @@
+- key: preventiv-cybersikkerhed
+  title: "Preventiv Cybersikkerhed"
+  tagline: "Forebyggelse frem for brandslukning — Zero Trust arkitektur, Security by Design og trusselsmodellering"
+  short: "Sikkerhedsarkitektur, Security by Design, trusselsmodellering og Zero Trust implementering."
+  icon: "🛡️"
+  color: "#FEE2E2"
+  pillar: cybersecurity
+  image_placeholder: "Billede: Zero Trust arkitektur-diagram"
+  highlights:
+    - value: "60-80%"
+      label: "Billigere end remediation"
+    - value: "<5 min"
+      label: "Mean Time to Detect"
+    - value: "<5%"
+      label: "Blast radius ved angreb"
+  about_title: "Hvad er Preventiv Cybersikkerhed?"
+  about_body: |
+    Preventiv cybersikkerhed handler om at bygge sikkerhed ind fra start — ikke som eftertanke, men som en fundamental del af jeres arkitektur og processer.
+
+    Vores tilgang er baseret på **Zero Trust-princippet**: *"Never Trust, Always Verify"*. Vi designer sikkerhedsarkitektur der beskytter gennem hele Cyber Kill Chain — fra rekognoscering til dataeksfiltrering.
+
+    Ved at fokusere på forebyggelse fremfor reaktion, reducerer vi både risiko og omkostninger markant.
+  sections:
+    - title: "Vores tilgang"
+      intro: "Vi arbejder systematisk med sikkerhed på tværs af hele Cyber Kill Chain."
+      items:
+        - title: "Zero Trust Arkitektur"
+          description: "Mikro-segmentering, identitetsverifikation og mindste-privilegium adgang for alle brugere og systemer."
+        - title: "Security by Design"
+          description: "Sikkerhed integreret fra kravspecifikation til deployment — ikke som et ekstra lag, men som en del af fundamentet."
+        - title: "Trusselsmodellering"
+          description: "Struktureret identifikation af trusler med STRIDE, PASTA og vores ZT-Kipling metodologi."
+    - title: "Forsvar gennem Cyber Kill Chain"
+      items:
+        - title: "Rekognoscering"
+          description: "Minimalt digitalt fodaftryk og reduktion af angrebsoverfladen."
+        - title: "Sårbarhedshåndtering"
+          description: "Proaktiv identificering og lukning af sårbarheder før de udnyttes."
+        - title: "Netværkssegmentering"
+          description: "Mikro-segmentering og isolation der begrænser lateral bevægelse."
+        - title: "Kontinuerlig overvågning"
+          description: "Real-time detektion med whitelisting og anomalibaseret monitoring."
+        - title: "Databeskyttelse"
+          description: "Kryptering, DLP og stærk adgangskontrol for følsomme data."
+        - title: "Incident Response"
+          description: "Veldefinerede processer for hurtig reaktion og minimering af skade."
+
+- key: ai-sikkerhed
+  title: "AI Sikkerhed"
+  tagline: "Beskyt jeres AI-initiativer — governance, compliance og Zero Trust for kunstig intelligens"
+  short: "AI Governance, EU AI Act compliance, datasikkerhed og Zero Trust for AI-systemer."
+  icon: "🤖"
+  color: "#DBEAFE"
+  pillar: cybersecurity
+  image_placeholder: "Billede: AI Governance framework"
+  highlights:
+    - value: "40%"
+      label: "Ser datalækage via GenAI som toprisiko"
+    - value: "50%"
+      label: "Ønsker sikker AI-enablement"
+    - value: "EU AI Act"
+      label: "Compliance-klar"
+  about_title: "Hvad er AI Sikkerhed?"
+  about_body: |
+    AI-adoption accelererer, men sikkerhedsrisiciene vokser i takt. Vi hjælper organisationer med at implementere AI ansvarligt og sikkert.
+
+    Vores tilgang dækker hele spektret fra **AI Governance Framework-design** til **EU AI Act compliance** og **Zero Trust for AI** — herunder input-validering, adgangskontrol og output-overvågning.
+
+    Vi hjælper jer med at balancere innovation og sikkerhed, så I kan udnytte AI's potentiale uden at kompromittere jeres sikkerhed.
+  sections:
+    - title: "Nøgleområder"
+      items:
+        - title: "AI Governance Framework"
+          description: "Design og implementering af governance-strukturer for ansvarlig AI-brug på tværs af organisationen."
+        - title: "EU AI Act Compliance"
+          description: "Risikoklassificering, Fundamental Rights Impact Assessment (FRIA) og DPIA for AI-systemer."
+        - title: "Data Klassificering & Sikkerhed"
+          description: "Systematisk klassificering og beskyttelse af data der bruges til AI-træning og -inferens."
+        - title: "Zero Trust for AI"
+          description: "Input-validering, adgangskontrol, output-overvågning og prompt injection-beskyttelse."
+        - title: "AI i Sikkerhedsoperationer"
+          description: "Sikker integration af AI-værktøjer i eksisterende sikkerhedsinfrastruktur."
+        - title: "Compliance-integration"
+          description: "Samspil mellem AI Act, NIS2, GDPR og ISO 27001 for helhedsorienteret compliance."
+
+- key: generativ-ai-som-sikkerhedsvaerktoej
+  title: "Generativ AI som Sikkerhedsværktøj"
+  tagline: "AI som force multiplier for sikkerhedsteams — trusselsanalyse, compliance og DevSecOps"
+  short: "AI-assisteret sikkerhedsarbejde, trusselsanalyse, compliance-dokumentation og DevSecOps."
+  icon: "⚡"
+  color: "#FEF3C7"
+  pillar: software
+  image_placeholder: "Billede: AI-assisteret sikkerhedsanalyse"
+  highlights:
+    - value: "50-70%"
+      label: "Reduktion i dokumentationstid"
+    - value: "Force Multiplier"
+      label: "For sikkerhedsteams"
+    - value: "GenAI + Sikkerhed"
+      label: "Unik kombination"
+  about_title: "Hvad er Generativ AI som Sikkerhedsværktøj?"
+  about_body: |
+    Generativ AI er en game-changer for sikkerhedsteams. Vi hjælper organisationer med at bruge AI som en **force multiplier** — ikke som erstatning for ekspertise, men som forstærkning af den.
+
+    Få kombinerer GenAI og sikkerhed med denne dybde. Vores tilgang demokratiserer sikkerhedsviden og reducerer dokumentationstid med 50-70%.
+  sections:
+    - title: "Anvendelsesområder"
+      items:
+        - title: "Trusselsmodellering med AI"
+          description: "Automatiseret trusselsidentifikation, scenariegenerering og angrebstræer med AI-assistance."
+        - title: "GRC & Compliance"
+          description: "AI-assisteret policygenerering, gap-analyse og kontrolmapping på tværs af ISO 27001, NIS2 og CRA."
+        - title: "DevSecOps"
+          description: "Intelligent kodegennemgang, fix-forslag og automatiseret sikkerhedsintegration i CI/CD-pipelines."
+        - title: "Sikkerhedskultur"
+          description: "Personaliseret træning, phishing-simulering og risikokommunikation drevet af AI."
+        - title: "Dokumentation"
+          description: "Automatiseret generering af sikkerhedsdokumentation, politikker og procedurer."
+        - title: "Incident Analyse"
+          description: "AI-assisteret analyse af sikkerhedshændelser og automatiseret rapportgenerering."
+
+- key: grc-og-compliance
+  title: "GRC & Compliance Rådgivning"
+  tagline: "Compliance som biprodukt — ISO 27001, NIS2, CRA, GDPR og AI Act"
+  short: "ISO 27001/9001 certificering, NIS2, CRA, GDPR, AI Act og løbende compliance-rådgivning."
+  icon: "📋"
+  color: "#E0E7FF"
+  pillar: leadership
+  image_placeholder: "Billede: Compliance framework oversigt"
+  highlights:
+    - value: "ISO 27001"
+      label: "Certificeringsekspertise"
+    - value: "NIS2"
+      label: "Compliance-klar"
+    - value: "5+"
+      label: "Regulatoriske frameworks"
+  about_title: "Hvad er GRC & Compliance Rådgivning?"
+  about_body: |
+    Vores filosofi er enkel: **"Compliance som biprodukt"** — når sikkerheden er rigtig, følger compliance naturligt.
+
+    Vi hjælper organisationer med at navigere det komplekse regulatoriske landskab, fra ISO 27001-certificering til NIS2-compliance og AI Act-forberedelse.
+
+    NIS2-deadlines skaber akut efterspørgsel, og CRA rammer softwareproducenter hårdt. Vi sikrer, at I er forberedt.
+  sections:
+    - title: "Regulatoriske frameworks"
+      items:
+        - title: "ISO 27001 / 9001"
+          description: "Fuld implementering og certificeringsstøtte for informationssikkerhed og kvalitetsstyring."
+        - title: "NIS2 Direktivet"
+          description: "Compliance for kritisk infrastruktur og vigtige sektorer — risikovurdering, rapportering og governance."
+        - title: "Cyber Resilience Act (CRA)"
+          description: "Krav til softwareproducenter om sikkerhed i hele produktlivscyklussen."
+        - title: "AI Act"
+          description: "Risikoklassificering, conformity assessment og governance for AI-systemer."
+        - title: "GDPR"
+          description: "Databeskyttelse, DPIA og integreret privacy-by-design tilgang."
+        - title: "Løbende Compliance"
+          description: "Kontinuerlig overvågning, audit-forberedelse og compliance-som-service."

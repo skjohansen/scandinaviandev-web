@@ -1,0 +1,66 @@
+nav:
+  - label: "Services"
+    url: "/services/"
+  - label: "Competencies"
+    url: "/competencies/"
+  - label: "Contact"
+    url: "/contact/"
+
+# Hero
+hero_label: "Cybersecurity Consulting"
+hero_title: "Security, Software Engineering & Leadership"
+hero_text: "We help Scandinavian businesses protect their digital assets through preventive cybersecurity, AI-driven security and compliance advisory."
+hero_cta: "View our services"
+hero_cta2: "Contact us"
+
+# Services section
+services_label: "Services"
+services_title: "Our Services"
+services_text: "We offer specialized cybersecurity services covering innovation, compliance and architecture."
+services_link: "Read more"
+
+# Why us section
+why_label: "Why Us"
+why_title: "Cybersecurity with Scandinavian business understanding"
+why_items:
+  - title: "Prevention over firefighting"
+    text: "60-80% cheaper than remediation. We build security in from the start."
+  - title: "AI as force multiplier"
+    text: "We use generative AI to amplify security teams with limited resources."
+  - title: "Compliance as byproduct"
+    text: "When security is right, compliance follows naturally. ISO 27001, NIS2, CRA."
+  - title: "Scandinavian approach"
+    text: "We understand flat hierarchy, trust-based leadership and pragmatic problem-solving."
+
+# Competencies section
+competencies_label: "Competencies"
+competencies_title: "14 Core Competencies"
+competencies_text: "Our expertise spans three pillars: Cybersecurity, Software Engineering and Leadership."
+competencies_cta: "View all competencies"
+
+# Pillars
+pillar_cybersecurity: "Cybersecurity"
+pillar_software: "Software Engineering"
+pillar_leadership: "Leadership"
+
+# CTA
+cta_title: "Ready to strengthen your security?"
+cta_text: "Contact us for a no-obligation conversation about your security needs."
+cta_button: "Contact us"
+
+# Contact
+contact_title: "Contact Us"
+contact_text: "We're ready to help you with your cybersecurity challenges."
+contact_email: "hello@scandinavian.dev"
+contact_phone: "+45 40 92 54 33"
+contact_address: "Nonsultant AB, Åkerstigen 72A, 532 38 Skara, Sweden"
+contact_email_label: "Email"
+contact_phone_label: "Phone"
+contact_address_label: "Address"
+
+# Footer
+footer_description: "ScandinavianDev is a Danish cybersecurity consulting firm specializing in preventive security, AI and compliance."
+footer_nav_title: "Navigation"
+footer_lang_title: "Languages"
+footer_contact_title: "Contact"
+footer_rights: "All rights reserved."
