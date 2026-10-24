@@ -1,108 +1,52 @@
 ---
-layout: default
-title: Cybersecurity Consulting
-lang: da
-permalink: /
-alternate:
-  en: /en/
-  sv: /sv/
+title: Security as a quality parameter
+description: >-
+  We make security work like good design: invisible, intentional, and there
+  from the first sketch. We upskill the engineers you already have.
+# Old site URLs (DA/EN/SV) that now point here
+redirect_from:
+  - /en/
+  - /sv/
 ---
+{%- assign t = site.data.i18n[site.lang] -%}
 
-{% assign strings = site.data.da.strings %}
-{% assign services = site.data.da.services %}
-{% assign competencies = site.data.da.competencies %}
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow">Security is a quality parameter</p>
+      <h1 class="hero__title">We make security work like good design — invisible, intentional, and there from the first sketch</h1>
+      <p class="lead hero__lead">
+        We upskill the engineers you already have, so security is built in from
+        day one instead of bolted on before launch. Technology and people at the
+        same time — that is what makes the whole product better, not just safer.
+      </p>
+      <a class="btn btn--primary btn--lg" href="{{ site.calendly_url }}" target="_blank" rel="noopener">{{ t.book_intro_call }}</a>
 
-<!-- Hero -->
-{% include hero.html
-   label=strings.hero_label
-   title=strings.hero_title
-   text=strings.hero_text
-   cta_text=strings.hero_cta
-   cta_url="/tjenester/"
-   cta2_text=strings.hero_cta2
-   cta2_url="/kontakt/"
-%}
-
-<!-- Services -->
-<section class="section section--light">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">{{ strings.services_label }}</span>
-      <h2>{{ strings.services_title }}</h2>
-      <p>{{ strings.services_text }}</p>
+      <ul class="value-props" role="list">
+        <li>
+          <h2>Faster to market</h2>
+          <p>No security rework late in the release cycle.</p>
+        </li>
+        <li>
+          <h2>Cheaper than hiring</h2>
+          <p>Specialists you can't find anyway — we train your team instead.</p>
+        </li>
+        <li>
+          <h2>Sales-ready proof</h2>
+          <p>Documented security your sales team can put on the table.</p>
+        </li>
+      </ul>
     </div>
-    <div class="card-grid card-grid--2col">
-      {% for service in services %}
-      {% include service-card.html
-         title=service.title
-         description=service.short
-         icon=service.icon
-         color=service.color
-         url_prefix="/tjenester/"
-         url=service.key
-         link_text=strings.services_link
-      %}
-      {% endfor %}
+
+    <div class="hero__media">
+      <img src="{{ '/assets/images/hero-scandinavia.jpg' | relative_url }}"
+           alt="Map of Scandinavia drawn in binary code" width="1328" height="1760" fetchpriority="high">
     </div>
   </div>
 </section>
 
-<!-- Why Us -->
-<section class="section section--white">
-  <div class="container">
-    <div class="two-col">
-      <div>
-        <span class="section-label">{{ strings.why_label }}</span>
-        <h2>{{ strings.why_title }}</h2>
-        <ul class="feature-list">
-          {% for item in strings.why_items %}
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <div>
-              <strong>{{ item.title }}</strong>
-              <span>{{ item.text }}</span>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <img src="assets/images/freepik__the-style-is-candid-image-photography-with-natural__64667.png" />
-    </div>
-  </div>
-</section>
+{% include offerings-overview.html %}
 
-<!-- Competencies Preview -->
-<section class="section section--light">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">{{ strings.competencies_label }}</span>
-      <h2>{{ strings.competencies_title }}</h2>
-      <p>{{ strings.competencies_text }}</p>
-    </div>
-    <div class="card-grid">
-      {% for c in competencies.cybersecurity limit:2 %}
-      {% include competency-card.html title=c.title description=c.description pillar="cybersecurity" %}
-      {% endfor %}
-      {% for c in competencies.software limit:2 %}
-      {% include competency-card.html title=c.title description=c.description pillar="software" %}
-      {% endfor %}
-      {% for c in competencies.leadership limit:2 %}
-      {% include competency-card.html title=c.title description=c.description pillar="leadership" %}
-      {% endfor %}
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="/kompetencer/" class="btn btn-outline">{{ strings.competencies_cta }}</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section--white">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>{{ strings.cta_title }}</h2>
-      <p>{{ strings.cta_text }}</p>
-      <a href="/kontakt/" class="btn btn-white">{{ strings.cta_button }}</a>
-    </div>
-  </div>
-</section>
+{% include cta.html
+  title="Build security into your development process from day one"
+  text="Book a 30-minute discovery call to evaluate your current SDLC maturity." %}

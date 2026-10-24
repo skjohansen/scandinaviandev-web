@@ -1,38 +1,25 @@
-{% assign strings = site.data[page.lang].strings %}
-{% assign lang = page.lang | default: "da" %}
-{% if lang == "da" %}
-  {% assign prefix = "" %}
-{% elsif lang == "en" %}
-  {% assign prefix = "/en" %}
-{% else %}
-  {% assign prefix = "/sv" %}
-{% endif %}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}">{% include logo-mark.svg %}<span>{{ site.wordmark }}</span></a>
 
-<header class="nav">
-  <div class="nav__inner">
-    <a href="{{ prefix | append: '/' | relative_url }}" class="nav__logo">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ScandinavianDev">
-    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+            aria-label="{{ t.menu_open }}" data-label-open="{{ t.menu_open }}" data-label-close="{{ t.menu_close }}">
+      <span class="nav-toggle__open">{% include icon.html name="menu" %}</span>
+      <span class="nav-toggle__close">{% include icon.html name="close" %}</span>
+    </button>
 
-    <ul class="nav__links">
-      {% for item in strings.nav %}
-      <li><a href="{{ prefix | append: item.url | relative_url }}" class="nav__link">{{ item.label }}</a></li>
-      {% endfor %}
-    </ul>
-
-    <div class="nav__actions">
-      {% include language-switcher.html %}
-      <button class="nav__toggle" aria-label="Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
-      </button>
-    </div>
+    <nav class="site-nav" id="site-nav" aria-label="{{ t.nav_label }}">
+      <ul class="site-nav__list">
+        {% for item in site.data.navigation %}
+          {% assign active = false %}
+          {% if page.url == item.url or page.url contains item.url %}{% assign active = true %}{% endif %}
+          <li>
+            <a class="site-nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}"
+               {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn--primary btn--sm site-nav__cta" href="{{ site.calendly_url }}" target="_blank" rel="noopener">{{ t.book_intro_call }}</a>
+    </nav>
   </div>
-
-  <nav class="nav__mobile">
-    <ul>
-      {% for item in strings.nav %}
-      <li><a href="{{ prefix | append: item.url | relative_url }}">{{ item.label }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
 </header>

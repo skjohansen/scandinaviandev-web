@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{%- comment -%}
+  One template for every offering page.
+  Content comes from the front matter in _offerings/<name>.md.
+{%- endcomment -%}
+{%- assign t = site.data.i18n[site.lang] -%}
+
+<article class="section offering">
+  <div class="container offering__grid">
+    <div class="offering__text">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+
+      <h2 class="label">{{ t.whats_included }}</h2>
+      {% include check-list.html items=page.included %}
+
+      <h2 class="label">{{ t.who_its_for }}</h2>
+      <p>{{ page.audience }}</p>
+
+      <h2 class="label">{{ t.decision_makers }}</h2>
+      <p>{{ page.decision_makers }}</p>
+
+      {{ content }}
+    </div>
+
+    <figure class="offering__media media-frame">
+      {% if page.illustration %}
+        {% include illustrations/{{ page.illustration }} %}
+      {% else %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="804" height="602">
+      {% endif %}
+    </figure>
+  </div>
+</article>
+
+{% include cta.html title=page.cta_title text=page.cta_text %}

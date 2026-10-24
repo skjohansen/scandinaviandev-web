@@ -1,0 +1,16 @@
+{%- comment -%}
+  Dark call-to-action band (see bottom of every design).
+  Params: title, text, button (optional), href (optional, defaults to Calendly)
+{%- endcomment -%}
+{%- assign cta_href = include.href | default: site.calendly_url -%}
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band">
+      <div class="cta-band__text">
+        <h2>{{ include.title }}</h2>
+        {% if include.text %}<p>{{ include.text }}</p>{% endif %}
+      </div>
+      <a class="btn btn--primary btn--lg" href="{{ cta_href }}"{% if cta_href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ include.button | default: t.schedule_calendly }}</a>
+    </div>
+  </div>
+</section>

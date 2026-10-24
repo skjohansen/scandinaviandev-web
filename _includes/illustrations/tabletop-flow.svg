@@ -1,0 +1,91 @@
+{%- comment -%}
+  Vector redraw of the tabletop exercise illustration.
+  Blueprint style: teams on the left feed into a scenario, decisions branch,
+  the chosen response path (blue) ends in written findings.
+{%- endcomment -%}
+<svg class="illustration" viewBox="0 0 800 600" role="img" aria-labelledby="tabletop-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="tabletop-title">Incident response blueprint: teams feed into a simulated incident, decisions branch under pressure, and the chosen response path ends in written findings</title>
+  <defs>
+    <pattern id="tt-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#E3E9F1" stroke-width="1"/>
+    </pattern>
+    <marker id="tt-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#1D4ED8"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#F6F8FB"/>
+  <rect width="800" height="600" fill="url(#tt-grid)"/>
+
+  <!-- Teams / business units (left column) -->
+  <g fill="#FFFFFF" stroke="#9AAAC2" stroke-width="1.5">
+    <g transform="translate(56 112)"><rect width="44" height="34" rx="3"/><path d="M8 34V20h10v14M26 10h10v8H26z"/></g>
+    <g transform="translate(56 192)"><rect width="44" height="34" rx="3"/><path d="M8 10h10v8H8zM26 10h10v8H26zM17 34V24h10v10"/></g>
+    <g transform="translate(56 272)"><rect width="44" height="34" rx="3"/><path d="M8 10h28M8 17h20M8 24h24"/></g>
+    <g transform="translate(56 352)"><rect width="44" height="34" rx="3"/><path d="M8 10h10v8H8zM26 10h10v8H26zM8 24h28"/></g>
+    <g transform="translate(56 432)"><rect width="44" height="34" rx="3"/><path d="M8 34V20h10v14M26 10h10v8H26zM26 24h10"/></g>
+  </g>
+  <g stroke="#B5C2D4" stroke-width="1.5" fill="none">
+    <path d="M100 129h60M100 209h60M100 289h60M100 369h60M100 449h60M160 129v320"/>
+  </g>
+  <g fill="#9AAAC2"><circle cx="160" cy="129" r="3"/><circle cx="160" cy="209" r="3"/><circle cx="160" cy="369" r="3"/><circle cx="160" cy="449" r="3"/></g>
+
+  <!-- Scenario grid (systems in play) -->
+  <g fill="#FFFFFF" stroke="#B5C2D4" stroke-width="1.5">
+    <rect x="236" y="156" width="30" height="24" rx="3"/><rect x="286" y="156" width="30" height="24" rx="3"/><rect x="336" y="156" width="30" height="24" rx="3"/>
+    <rect x="236" y="216" width="30" height="24" rx="3"/><rect x="286" y="216" width="30" height="24" rx="3"/><rect x="336" y="216" width="30" height="24" rx="3"/>
+    <rect x="236" y="336" width="30" height="24" rx="3"/><rect x="286" y="336" width="30" height="24" rx="3"/><rect x="336" y="336" width="30" height="24" rx="3"/>
+    <rect x="236" y="396" width="30" height="24" rx="3"/><rect x="286" y="396" width="30" height="24" rx="3"/><rect x="336" y="396" width="30" height="24" rx="3"/>
+  </g>
+  <g stroke="#CBD5E2" stroke-width="1" fill="none">
+    <path d="M266 168h20M316 168h20M266 228h20M316 228h20M266 348h20M316 348h20M266 408h20M316 408h20M251 180v36M301 180v36M351 180v36M251 360v36M301 360v36M351 360v36"/>
+  </g>
+
+  <!-- Highlighted response path -->
+  <g fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 289h70"/>
+    <path d="M230 289h170"/>
+    <path d="M462 289h46"/>
+    <path d="M508 289c22 0 22-90 52-90h20"/>
+    <path d="M508 289h72"/>
+    <path d="M508 289c22 0 22 90 52 90h20" stroke="#9AAAC2" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M640 289h20a10 10 0 0 1 10 10v99" marker-end="url(#tt-arrow)"/>
+  </g>
+  <g fill="#1D4ED8"><circle cx="160" cy="289" r="4.5"/><circle cx="315" cy="289" r="4"/><circle cx="508" cy="289" r="4"/></g>
+
+  <!-- Simulated incident node -->
+  <rect x="400" y="266" width="62" height="46" rx="5" fill="#DBE5FB" stroke="#1D4ED8" stroke-width="2"/>
+  <path d="M431 278l-11 20h22z" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M431 285v6M431 294v.5" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Decision options -->
+  <g stroke-width="1.5">
+    <rect x="580" y="182" width="60" height="34" rx="4" fill="#FFFFFF" stroke="#9AAAC2"/>
+    <rect x="580" y="272" width="60" height="34" rx="4" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+    <rect x="580" y="362" width="60" height="34" rx="4" fill="#FFFFFF" stroke="#B5C2D4"/>
+  </g>
+  <g stroke="#9AAAC2" stroke-width="1.5" stroke-linecap="round">
+    <path d="M592 194h36M592 203h24"/>
+    <path d="M592 374h36M592 383h24" stroke="#C3CEDD"/>
+  </g>
+  <path d="M594 290l7 7 13-14" fill="none" stroke="#1D4ED8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#CBD5E2" stroke-width="1" fill="none">
+    <path d="M640 199h60l40-40M640 199h100"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#B5C2D4" stroke-width="1.5">
+    <rect x="726" y="140" width="34" height="26" rx="3"/><rect x="726" y="186" width="34" height="26" rx="3"/>
+  </g>
+
+  <!-- Written findings -->
+  <rect x="560" y="410" width="180" height="128" rx="6" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+  <path d="M580 434h70" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#1D4ED8" stroke-width="2"><path d="M580 461l4 4 8-8M580 487l4 4 8-8M580 513l4 4 8-8"/></g>
+    <g stroke="#9AAAC2" stroke-width="2"><path d="M602 461h112M602 487h96M602 513h104"/></g>
+  </g>
+
+  <!-- Faint timeline along the bottom -->
+  <g stroke="#CBD5E2" stroke-width="1.5"><path d="M56 540h460"/></g>
+  <g fill="#B5C2D4"><circle cx="100" cy="540" r="3.5"/><circle cx="200" cy="540" r="3.5"/><circle cx="300" cy="540" r="3.5"/><circle cx="400" cy="540" r="3.5"/></g>
+  <circle cx="500" cy="540" r="4.5" fill="#1D4ED8"/>
+</svg>

@@ -1,0 +1,5 @@
+{%- comment -%}
+  ScandinavianDev shield logo (vector). Colour follows the CSS `color`
+  property. Standalone copy for favicons etc.: assets/images/logo-mark.svg
+{%- endcomment -%}
+<svg class="logo-mark" viewBox="0 0 950 1021" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 0H950V169H723L414 533 261 373 183 460 418 710 779 283H950V372C950 692 757 892 475 1021 193 892 0 692 0 372Z"/></svg>

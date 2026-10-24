@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Components: buttons, labels, lists, cards, CTA band, media frame
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;                 /* touch target */
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font: 600 var(--fs-base)/1.2 var(--font);
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover { text-decoration: none; }
+.btn .icon { width: 20px; height: 20px; }
+.btn--sm { min-height: 40px; padding: 0.5rem 1.125rem; font-size: var(--fs-sm); }
+.btn--lg { min-height: 56px; padding: 1rem 1.5rem; font-size: 1.0625rem; }
+
+.btn--primary { background: var(--c-primary); color: var(--c-white); }
+.btn--primary:hover { background: var(--c-primary-hover); color: var(--c-white); }
+
+.btn--outline { border-color: var(--c-primary); color: var(--c-primary); }
+.btn--outline:hover { background: var(--c-primary); color: var(--c-white); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+/* ---------- Labels ---------- */
+.eyebrow {
+  margin-bottom: var(--space-3);
+  color: var(--c-accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+.label {
+  margin: var(--space-7) 0 var(--space-4);
+  color: var(--c-subtle);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.lead { font-size: var(--fs-lead); line-height: 1.65; color: var(--c-muted); }
+
+/* ---------- Check list ---------- */
+.check-list { display: grid; gap: var(--space-3); }
+.check-list li { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--c-text); font-weight: 500; }
+.check-list .icon { flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; color: var(--c-ink); }
+@media (min-width: 768px) {
+  .check-list--2col { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-6); }
+}
+
+/* ---------- Supporting offering card ---------- */
+.card-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+@media (min-width: 768px)  { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1280px) { .card-grid { grid-template-columns: repeat(4, 1fr); gap: var(--space-6); } }
+
+.offer-card {
+  position: relative;
+  height: 100%;
+  padding: var(--space-5);
+  background: var(--c-surface);
+  border-radius: var(--radius-sm);
+}
+.offer-card:hover { background: var(--c-surface-hover); }
+.offer-card__title { margin-bottom: var(--space-2); font-size: 1.1875rem; }
+.offer-card__title a { color: var(--c-ink); }
+/* whole card is clickable */
+.offer-card__title a::after { content: ""; position: absolute; inset: 0; }
+.offer-card__tag {
+  margin-bottom: var(--space-4);
+  color: var(--c-accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.offer-card p:last-child { margin: 0; font-size: var(--fs-sm); }
+@media (min-width: 768px) { .offer-card { padding: var(--space-6) var(--space-5) var(--space-8); } }
+
+/* ---------- Media frame (illustrations) ---------- */
+.media-frame { display: block; overflow: hidden; background: var(--c-surface); border-radius: var(--radius-sm); }
+.media-frame img,
+.media-frame .illustration { display: block; width: 100%; height: auto; }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-7) var(--space-5);
+  background: var(--c-navy);
+}
+.cta-band h2 { margin-bottom: var(--space-2); color: var(--c-white); font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); }
+.cta-band p { margin: 0; color: var(--c-on-navy); }
+.cta-band p a { color: var(--c-white); text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 1024px) {
+  .cta-band {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+    padding: var(--space-8) clamp(2rem, 8vw, 14rem);
+  }
+  .cta-band__text { text-align: center; flex: 1; }
+}

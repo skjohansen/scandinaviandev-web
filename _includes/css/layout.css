@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Layout: container, sections, header, footer.
+   Mobile-first: base = phone, then min-width 768px / 1024px / 1280px.
+   Never use max-width media queries.
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: var(--section-y); }
+.section--tight { padding-block: var(--space-6); }
+
+.divider { border: 0; border-top: 1px solid var(--c-border); margin: var(--space-8) 0 var(--space-6); }
+
+/* ---------- Header ---------- */
+.site-header { position: relative; z-index: 100; background: var(--c-white); }
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--header-h);
+}
+
+.wordmark {
+  color: var(--c-ink);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.wordmark:hover { text-decoration: none; color: var(--c-ink); }
+.wordmark { display: inline-flex; align-items: center; gap: 0.6em; }
+.logo-mark { flex-shrink: 0; width: auto; height: 1.75em; color: var(--c-primary); }
+.wordmark--sm { font-size: var(--fs-sm); }
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-ink);
+  cursor: pointer;
+}
+.nav-toggle__close { display: none; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__open { display: none; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__close { display: inline-flex; }
+
+/* Mobile menu: hidden until toggled (JS adds .is-open).
+   Without JS the menu is always shown, so links still work. */
+.site-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-2) var(--gutter) var(--space-6);
+  background: var(--c-white);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.js .site-nav:not(.is-open) { display: none; }
+
+.site-nav__link {
+  display: block;
+  padding: var(--space-3) 0;
+  color: var(--c-text);
+  font-weight: 500;
+}
+.site-nav__link:hover, .site-nav__link.is-active { color: var(--c-primary); text-decoration: none; }
+.site-nav__cta { margin-top: var(--space-4); width: 100%; }
+
+@media (min-width: 768px) {
+  .wordmark { font-size: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .nav-toggle { display: none; }
+  .site-nav,
+  .js .site-nav:not(.is-open) {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  .site-nav__list { display: flex; gap: var(--space-6); }
+  .site-nav__link { padding: var(--space-2) 0; font-size: var(--fs-sm); }
+  .site-nav__cta { margin-top: 0; width: auto; }
+}
+
+/* ---------- Footer ---------- */
+/* Sitemap footer: blue section link + dot-separated sub-links */
+.site-footer { padding: var(--space-4) 0 var(--space-6); }
+.site-footer > .container > * { border-top: 1px solid var(--c-border); }
+.site-footer__grid { display: grid; gap: var(--space-5); padding-top: var(--space-5); }
+
+.footer-col__title { display: inline-block; margin-bottom: var(--space-1); font-size: 1.125rem; font-weight: 500; color: var(--c-primary); }
+.footer-col__links { display: flex; flex-wrap: wrap; font-size: var(--fs-xs); line-height: 1.7; }
+.footer-col__links li:not(:last-child)::after { content: "·"; margin: 0 0.4em; color: var(--c-subtle); }
+.footer-col__links a { color: var(--c-muted); }
+.footer-col__links a:hover { color: var(--c-ink); }
+
+.site-footer__bottom { margin: var(--space-6) 0 0; padding-top: var(--space-4); font-size: 0.75rem; color: var(--c-subtle); }
+
+@media (min-width: 768px) {
+  .site-footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+}

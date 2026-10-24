@@ -1,0 +1,46 @@
+{%- comment -%}
+  Wide "five offerings, one path" illustration for /offerings/ (tablet and up).
+  Circle centres line up with the five text columns below (column width 320,
+  gap 32 inside a 1728-wide row). Icons come from offering-icons.svg, which
+  must be included on the page first.
+{%- endcomment -%}
+<svg class="illustration offerings-path__wide" viewBox="0 0 1728 330" role="img" aria-labelledby="path-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="path-title">Five offerings as one path: training, security champions, tabletop exercises, fractional CISO and due diligence, connected by arrows</title>
+  <defs>
+    <pattern id="path-grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#DFE6F4" stroke-width="1"/>
+    </pattern>
+    <marker id="path-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#1D4ED8"/>
+    </marker>
+  </defs>
+
+  <rect width="1728" height="330" fill="#FAFBFE"/>
+  <rect width="1728" height="330" fill="url(#path-grid)"/>
+
+  <!-- Arrows between steps -->
+  <g stroke="#1D4ED8" stroke-width="4" stroke-linecap="round" fill="none" marker-end="url(#path-arrow)">
+    <path d="M300 165H382"/>
+    <path d="M634 165H734"/>
+    <path d="M986 165H1086"/>
+    <path d="M1338 165H1438"/>
+  </g>
+
+  <!-- Step circles -->
+  <g fill="#FFFFFF" stroke="#1D4ED8" stroke-width="5">
+    <circle cx="160" cy="165" r="130"/>
+    <circle cx="512" cy="165" r="112"/>
+    <circle cx="864" cy="165" r="112"/>
+    <circle cx="1216" cy="165" r="112"/>
+    <circle cx="1568" cy="165" r="112"/>
+  </g>
+
+  <!-- Icons -->
+  <g fill="none" stroke="#1E2F7A" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#path-icon-training" x="85" y="90" width="150" height="150"/>
+    <use href="#path-icon-champions" x="450" y="103" width="124" height="124"/>
+    <use href="#path-icon-tabletop" x="802" y="103" width="124" height="124"/>
+    <use href="#path-icon-ciso" x="1154" y="103" width="124" height="124"/>
+    <use href="#path-icon-diligence" x="1506" y="103" width="124" height="124"/>
+  </g>
+</svg>

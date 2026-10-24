@@ -1,0 +1,62 @@
+---
+title: About & Contact
+description: >-
+  Scandinavian dev is a Swedish company founded in 2019, training Scandinavian
+  organisations to build secure, high-quality software. Book a 30-minute call.
+permalink: /contact/
+redirect_from:
+  - /kontakt/
+  - /en/contact/
+  - /sv/kontakt/
+  - /about/
+---
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign c = site.contact -%}
+{%- assign l = site.legal -%}
+
+<section class="section about">
+  <div class="container about__grid">
+    <div class="about__text" id="story">
+      <p class="eyebrow">About &amp; Contact</p>
+      <h1>A Swedish company, founded in 2019</h1>
+      <p class="lead lead--strong">
+        Scandinavian dev exists to train a generation of Scandinavian
+        organisations not just to survive in the digital age, but to thrive in it.
+      </p>
+      <p>
+        The company was founded in 2019 with a deep focus on software development
+        and the conviction that it deserves to be treated as an engineering
+        discipline — with the standards, rigour and accountability that word carries.
+      </p>
+      <p>
+        Security is a quality attribute. Writing secure code has a positive effect
+        on every other quality parameter, and the reverse is just as true: poor
+        quality is poor security. That is why the work starts inside the
+        engineering team rather than beside it.
+      </p>
+
+      <hr class="divider divider--compact">
+
+      <p class="about__quote">Poor quality is poor security.</p>
+      <p class="about__note">Founded 2019. Based in {{ c.city }}, {{ c.country }}. Working with product teams across the Nordics and the EU.</p>
+    </div>
+
+    <aside class="legal-panel" id="legal" aria-labelledby="legal-heading">
+      <h2 class="legal-panel__title" id="legal-heading">{{ t.legal_information }}</h2>
+      <dl class="legal-list">
+        <div><dt>{{ t.legal_name }}</dt><dd>{{ l.name }}</dd></div>
+        <div><dt>{{ t.trading_as }}</dt><dd>{{ l.trading_as }}</dd></div>
+        <div><dt>{{ t.address }}</dt><dd>{{ c.street }}, {{ c.postcode }} {{ c.city }}, {{ c.country }}</dd></div>
+        <div><dt>{{ t.org_number }}</dt><dd>{{ l.org_number }}</dd></div>
+        <div><dt>{{ t.vat_number }}</dt><dd>{{ l.vat_number }}</dd></div>
+        <div><dt>{{ t.ceo }}</dt><dd>{{ l.ceo }}</dd></div>
+        <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ c.email }}">{{ c.email }}</a></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+{%- capture cta_text -%}
+  <a href="mailto:{{ c.email }}">{{ c.email }}</a> — or book 30 minutes directly.
+{%- endcapture -%}
+{% include cta.html title="Talk to the person who does the work" text=cta_text %}
