@@ -1,22 +1,71 @@
+# ScandinavianDev — Jekyll config (GitHub Pages)
+# Restart `bundle exec jekyll serve` after editing this file.
+
 title: ScandinavianDev
-description: Cybersecurity consulting — Sikkerhed, Software Engineering & Lederskab
-baseurl: ""
+wordmark: Scandinavian Dev
+tagline: Security as a quality parameter
+description: >-
+  We upskill the engineers you already have, so security is built in from
+  day one instead of bolted on before launch. Product security training,
+  security champions, tabletop exercises, fractional CISO and security due
+  diligence for European product teams.
 url: "https://scandinavian.dev"
+baseurl: ""
+lang: en          # UI strings come from _data/i18n/<lang>.yml
+locale: en_GB
 
+author:
+  name: Stephan Johansen
+
+# Booking link used by every "Book a call" / "Schedule via Calendly" button
+calendly_url: "https://calendly.com/scandinavian-dev"
+
+# Used in footer and contact page
+contact:
+  email: info@scandinavian.dev
+  phone: "+45 40 92 54 33"
+  phone_href: "+4540925433"
+  company: Nonsultant AB
+  street: Åkerstigen 72A
+  postcode: "532 38"
+  city: Skara
+  country: Sweden
+
+# Legal information panel on /contact/ (design 08-about-contact)
+legal:
+  name: Nonsultant AB
+  trading_as: Scandinavian dev
+  org_number: 559217-2703
+  vat_number: SE559217270301
+  ceo: Stephan Kaas Johansen
+
+# No remote/default theme: all styling lives in assets/css/
+theme: null
+
+permalink: pretty
 markdown: kramdown
-kramdown:
-  input: GFM
 
-sass:
-  sass_dir: _sass
-  style: compressed
+# Offerings: one file per offering in _offerings/, sorted by `order`
+collections:
+  offerings:
+    output: true
+    permalink: /offerings/:name/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from   # `redirect_from:` in front matter (old URLs)
 
 defaults:
   - scope:
       path: ""
     values:
       layout: default
-      lang: da
+  - scope:
+      path: ""
+      type: offerings
+    values:
+      layout: offering
 
 exclude:
   - Gemfile
@@ -26,3 +75,6 @@ exclude:
   - .devcontainer
   - README.md
   - CLAUDE.md
+  - docs/
+  - vendor/
+  - node_modules/

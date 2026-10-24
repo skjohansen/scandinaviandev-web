@@ -1,0 +1,5 @@
+# Main navigation (header + footer). Order matters.
+- title: Offerings
+  url: /offerings/
+- title: About & Contact
+  url: /contact/

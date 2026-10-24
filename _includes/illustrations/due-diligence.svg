@@ -1,0 +1,161 @@
+{%- comment -%}
+  Vector redraw of the Security Due Diligence illustration.
+  Risk checks on the left, an assessment grid of systems / data / apps / teams,
+  a blue remediation path ending in an "Investment ready" badge, and two
+  maturity radar charts (before → after) on the right.
+{%- endcomment -%}
+<svg class="illustration" viewBox="0 0 800 600" role="img" aria-labelledby="dd-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="dd-title">Security maturity assessment: risks across systems, data, applications and teams are checked and remediated along a prioritised path, ending in an investment-ready result, with maturity rising from the first radar chart to the second</title>
+  <defs>
+    <pattern id="dd-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#DCE3EC"/>
+    </pattern>
+    <!-- Icons: Lucide-style, 24-unit grid, stroke inherited from <use> -->
+    <symbol id="dd-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="dd-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+    <symbol id="dd-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
+    <symbol id="dd-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="dd-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="dd-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="dd-app" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M6 4v4M10 4v4"/></symbol>
+    <symbol id="dd-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="dd-db-search" viewBox="0 0 24 24"><path d="M21 11.7V5"/><path d="m22 22-1.9-1.9"/><path d="M3 12a9 3 0 0 0 8.7 3"/><path d="M3 5v14a9 3 0 0 0 9.3 3"/><circle cx="18" cy="18" r="3"/><ellipse cx="12" cy="5" rx="9" ry="3"/></symbol>
+    <symbol id="dd-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></symbol>
+    <symbol id="dd-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="dd-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></symbol>
+    <symbol id="dd-user-cog" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h5"/><circle cx="18" cy="17" r="3"/><path d="M18 12v2M18 20v2M13 17h2M21 17h2"/></symbol>
+    <symbol id="dd-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+  </defs>
+
+  <rect width="800" height="600" fill="#F6F8FB"/>
+  <rect width="800" height="600" fill="url(#dd-dots)" opacity="0.6"/>
+
+  <!-- Grey grid connectors (rows at y 108/224/340/456, columns at x 192/304/416/528) -->
+  <g stroke="#C9D3E1" stroke-width="1.5" fill="none">
+    <path d="M68 108h20M120 108h30M68 224h20M120 224h30M68 340h20M120 340h30M68 456h20M120 456h30"/>
+    <path d="M234 108h28M346 108h28M458 108h28M234 224h28M346 224h28M458 224h28M234 340h28M458 340h28M234 456h28M346 456h28"/>
+    <path d="M192 146v40M192 262v40M192 378v40M416 146v40M416 262v40M528 378v38"/>
+  </g>
+
+  <!-- Blue remediation path -->
+  <g fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M304 146v40M304 262v40M346 340h28M416 378v40M458 456h30"/>
+    <path d="M528 146v40M528 262v40"/>
+    <path d="M570 224h26"/>
+    <path d="M570 340c15 0 11 40 26 40"/>
+  </g>
+  <g fill="#1D4ED8">
+    <circle cx="304" cy="166" r="3.5"/><circle cx="304" cy="282" r="3.5"/><circle cx="360" cy="340" r="3.5"/>
+    <circle cx="416" cy="398" r="3.5"/><circle cx="528" cy="166" r="3.5"/><circle cx="528" cy="282" r="3.5"/>
+  </g>
+
+  <!-- Left column: risk shields + check circles -->
+  <g fill="#FFFFFF" stroke="#7C8FB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#dd-shield" x="32" y="88" width="40" height="40"/>
+    <use href="#dd-shield" x="32" y="204" width="40" height="40"/>
+    <use href="#dd-shield" x="32" y="320" width="40" height="40"/>
+    <use href="#dd-shield" x="32" y="436" width="40" height="40"/>
+    <circle cx="104" cy="108" r="16"/><circle cx="104" cy="224" r="16"/><circle cx="104" cy="340" r="16"/><circle cx="104" cy="456" r="16"/>
+  </g>
+  <g fill="none" stroke="#7C8FB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 101v8M52 114v.5"/>
+    <path d="M52 217v12M46 223h12"/>
+    <path d="M52 333v8M52 346v.5"/>
+    <path d="M46 456l5 5 8-9" stroke="#1D4ED8"/>
+    <path d="M99 103l10 10M109 103l-10 10"/>
+    <path d="M104 334v8M104 346v.5"/>
+    <path d="M98 456l4 4 8-8" stroke="#1D4ED8"/>
+  </g>
+  <use href="#dd-cog" x="94" y="214" width="20" height="20" fill="none" stroke="#7C8FB0" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Assessment cards (shadow + card) -->
+  <g fill="#E6EBF2">
+    <rect x="152" y="73" width="84" height="76" rx="7"/><rect x="264" y="73" width="84" height="76" rx="7"/><rect x="376" y="73" width="84" height="76" rx="7"/><rect x="488" y="73" width="84" height="76" rx="7"/>
+    <rect x="152" y="189" width="84" height="76" rx="7"/><rect x="264" y="189" width="84" height="76" rx="7"/><rect x="376" y="189" width="84" height="76" rx="7"/><rect x="488" y="189" width="84" height="76" rx="7"/>
+    <rect x="152" y="305" width="84" height="76" rx="7"/><rect x="264" y="305" width="84" height="76" rx="7"/><rect x="376" y="305" width="84" height="76" rx="7"/><rect x="488" y="305" width="84" height="76" rx="7"/>
+    <rect x="152" y="421" width="84" height="76" rx="7"/><rect x="264" y="421" width="84" height="76" rx="7"/><rect x="376" y="421" width="84" height="76" rx="7"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#C9D3E1" stroke-width="1.5">
+    <rect x="150" y="70" width="84" height="76" rx="7"/><rect x="262" y="70" width="84" height="76" rx="7"/><rect x="374" y="70" width="84" height="76" rx="7"/><rect x="486" y="70" width="84" height="76" rx="7"/>
+    <rect x="150" y="186" width="84" height="76" rx="7"/><rect x="262" y="186" width="84" height="76" rx="7"/><rect x="374" y="186" width="84" height="76" rx="7"/><rect x="486" y="186" width="84" height="76" rx="7"/>
+    <rect x="150" y="302" width="84" height="76" rx="7"/><rect x="374" y="418" width="84" height="76" rx="7"/><rect x="262" y="418" width="84" height="76" rx="7"/><rect x="150" y="418" width="84" height="76" rx="7"/>
+  </g>
+  <!-- Cards on the remediation path get a blue outline -->
+  <g fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.8">
+    <rect x="262" y="302" width="84" height="76" rx="7"/><rect x="374" y="302" width="84" height="76" rx="7"/><rect x="486" y="302" width="84" height="76" rx="7"/>
+  </g>
+  <!-- Card label lines -->
+  <g stroke="#D3DBE6" stroke-width="3" stroke-linecap="round">
+    <path d="M176 128h32M288 128h32M400 128h32M512 128h32M176 244h32M288 244h32M400 244h32M512 244h32M176 360h32M288 360h32M400 360h32M512 360h32M176 476h32M288 476h32M400 476h32"/>
+  </g>
+  <!-- Card icons -->
+  <g fill="none" stroke="#6B7FA3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#dd-building" x="178" y="84" width="28" height="28"/>
+    <use href="#dd-layers" x="290" y="84" width="28" height="28"/>
+    <use href="#dd-database" x="402" y="84" width="28" height="28"/>
+    <use href="#dd-monitor" x="514" y="84" width="28" height="28"/>
+    <use href="#dd-shield-check" x="178" y="200" width="28" height="28"/>
+    <use href="#dd-layers" x="290" y="200" width="28" height="28"/>
+    <use href="#dd-app" x="402" y="200" width="28" height="28"/>
+    <use href="#dd-users" x="514" y="200" width="28" height="28"/>
+    <use href="#dd-db-search" x="178" y="316" width="28" height="28"/>
+    <use href="#dd-file" x="178" y="432" width="28" height="28"/>
+    <use href="#dd-user-cog" x="290" y="432" width="28" height="28"/>
+    <use href="#dd-cog" x="402" y="432" width="28" height="28"/>
+  </g>
+  <g fill="none" stroke="#1D4ED8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#dd-network" x="290" y="316" width="28" height="28"/>
+    <use href="#dd-shield-check" x="402" y="316" width="28" height="28"/>
+    <use href="#dd-alert" x="514" y="316" width="28" height="28"/>
+  </g>
+
+  <!-- Investment ready badge -->
+  <circle cx="528" cy="456" r="44" fill="#FFFFFF" stroke="#C9D3E1" stroke-width="1.5"/>
+  <circle cx="528" cy="456" r="37" fill="none" stroke="#1D4ED8" stroke-width="2"/>
+  <use href="#dd-shield" x="516" y="422" width="24" height="24" fill="#DBE5FB" stroke="#1D4ED8" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M524 434l3 3 5-5" fill="none" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="528" y="461" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="0.6" fill="#13233A">INVESTMENT</text>
+  <text x="528" y="473" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="0.6" fill="#13233A">READY</text>
+
+  <!-- Maturity radar: before -->
+  <rect x="596" y="150" width="176" height="140" rx="7" fill="#FFFFFF" stroke="#C9D3E1" stroke-width="1.5"/>
+  <g fill="none" stroke="#D3DBE6" stroke-width="1">
+    <path d="M685 176l38.1 22v44L685 264l-38.1-22v-44z"/>
+    <path d="M685 190l26 15v30l-26 15-26-15v-30z"/>
+    <path d="M685 204l13.9 8v16L685 236l-13.9-8v-16z"/>
+    <path d="M685 176v88M646.9 198l76.2 44M646.9 242l76.2-44"/>
+  </g>
+  <path d="M685 198l13.3 14.3 9.6 20.9-22.9 0-17.1-3.3 1.9-18.7z" fill="#1D4ED8" fill-opacity="0.18" stroke="#6B7FA3" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M606 164h24" stroke="#B5C2D4" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Maturity radar: after -->
+  <rect x="596" y="310" width="176" height="140" rx="7" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.8"/>
+  <g fill="none" stroke="#D3DBE6" stroke-width="1">
+    <path d="M685 336l38.1 22v44L685 424l-38.1-22v-44z"/>
+    <path d="M685 350l26 15v30l-26 15-26-15v-30z"/>
+    <path d="M685 364l13.9 8v16L685 396l-13.9-8v-16z"/>
+    <path d="M685 336v88M646.9 358l76.2 44M646.9 402l76.2-44"/>
+  </g>
+  <path d="M685 340.4l30.5 22 1.9 36.3L685 413l-30.5-15.4-3.8-37.4z" fill="#1D4ED8" fill-opacity="0.35" stroke="#1D4ED8" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M606 324h24" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round"/>
+  <use href="#dd-shield-check" x="744" y="316" width="22" height="22" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Maturity scale labels -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="8.5" font-weight="500" fill="#6B7FA3">
+    <text x="685" y="170" text-anchor="middle">Optimized</text>
+    <text x="729" y="197" text-anchor="start">Managed</text>
+    <text x="729" y="250" text-anchor="start">Defined</text>
+    <text x="685" y="277" text-anchor="middle">Initial</text>
+    <text x="641" y="250" text-anchor="end">Ad hoc</text>
+    <text x="641" y="197" text-anchor="end">Measured</text>
+    <text x="685" y="330" text-anchor="middle">Optimized</text>
+    <text x="729" y="357" text-anchor="start">Managed</text>
+    <text x="729" y="410" text-anchor="start">Defined</text>
+    <text x="685" y="437" text-anchor="middle">Initial</text>
+    <text x="641" y="410" text-anchor="end">Ad hoc</text>
+    <text x="641" y="357" text-anchor="end">Measured</text>
+  </g>
+
+  <!-- before → after -->
+  <path d="M685 290v16" stroke="#9AAAC2" stroke-width="1.5" stroke-dasharray="3 3"/>
+</svg>

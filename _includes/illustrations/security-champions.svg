@@ -1,0 +1,168 @@
+{%- comment -%}
+  Vector redraw of the Security Champions illustration.
+  Teams and tools connected in one network around a security shield;
+  blue lines are the champions' direct links.
+{%- endcomment -%}
+<svg class="illustration" viewBox="0 0 800 600" role="img" aria-labelledby="ch-title" xmlns="http://www.w3.org/2000/svg">
+  <title id="ch-title">A network of teams and tools, from code and data to sales and operations, all connected to a central security shield, with security champions linking teams directly</title>
+  <defs>
+    <pattern id="ch-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#DCE3EC"/></pattern>
+    <linearGradient id="ch-tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.45" stop-color="#E4ECF7"/><stop offset="1" stop-color="#9DB8E0"/></linearGradient>
+    <linearGradient id="ch-core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9D8F2"/><stop offset="0.5" stop-color="#7C9DDB"/><stop offset="1" stop-color="#2F5DB8"/></linearGradient>
+    <symbol id="ch-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="ch-edit" viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a2 2 0 0 1 3 3L12 15l-4 1 1-4Z"/></symbol>
+    <symbol id="ch-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="ch-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="ch-trend" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+    <symbol id="ch-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="ch-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><circle cx="12" cy="12" r="2"/><path d="M12 7.5V10M10.5 13.3l-4 3.7M13.5 13.3l4 3.7"/></symbol>
+    <symbol id="ch-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="ch-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m10 7 4 3-2 .5-.5 2z"/></symbol>
+    <symbol id="ch-browser" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M6 4v4"/><path d="M9 16l3-3 3 3"/></symbol>
+    <symbol id="ch-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="ch-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+    <symbol id="ch-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></symbol>
+  </defs>
+  <rect width="800" height="600" fill="#F6F8FB"/>
+  <rect width="800" height="600" fill="url(#ch-dots)" opacity="0.6"/>
+  <path d="M165 175L285 120M165 175L305 245M165 175L150 330M285 120L410 105M285 120L305 245M410 105L520 150M410 105L520 320M520 150L520 320M520 150L650 230M305 245L320 405M150 330L320 405M150 330L180 470M150 330L520 320M320 405L180 470M320 405L300 515M320 405L520 320M180 470L300 515M440 480L520 320M440 480L320 405M440 480L650 470M300 515L440 480M650 230L520 320M650 230L745 215M650 230L745 360M745 215L745 360M745 360L520 320M745 360L650 470M650 470L650 230M285 120L520 320" fill="none" stroke="#C3CEDD" stroke-width="1.2"/>
+  <path d="M305 245L520 320M520 320L650 470" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round"/>
+  <g fill="none" stroke="#2C3E5C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(165 175)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-code" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(285 120)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-edit" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(410 105)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-database" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(520 150)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-users" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(305 245)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-trend" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(150 330)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-settings" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(650 230)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-code" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(745 215)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-bag" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(745 360)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-cart" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(320 405)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-network" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(180 470)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-globe" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(300 515)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-monitor" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(440 480)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-browser" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  <g transform="translate(650 470)">
+    <ellipse cx="3" cy="37" rx="30" ry="6" fill="#0B1930" opacity="0.08"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="url(#ch-tile)"/>
+    <rect x="-28" y="13" width="56" height="15" rx="7" fill="#F8FAFD"/>
+    <rect x="-28" y="13" width="56" height="7" fill="#F8FAFD"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="7" fill="none" stroke="#C3D0E2" stroke-width="1.2"/>
+    <rect x="-12" y="19" width="20" height="3" rx="1.5" fill="#D3DBE6"/>
+    <use href="#ch-share" x="-12" y="-20" width="24" height="24"/>
+  </g>
+  </g>
+  <g transform="translate(520 320)">
+    <ellipse cx="3" cy="49" rx="40" ry="7" fill="#0B1930" opacity="0.12"/>
+    <rect x="-38" y="-38" width="76" height="76" rx="9" fill="url(#ch-core)"/>
+    <rect x="-38" y="20" width="76" height="18" rx="9" fill="#F3F6FC"/>
+    <rect x="-38" y="20" width="76" height="9" fill="#F3F6FC"/>
+    <rect x="-38" y="-38" width="76" height="76" rx="9" fill="none" stroke="#1D4ED8" stroke-width="1.6"/>
+    <path transform="translate(-17 -30) scale(1.42)" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" fill="#FFFFFF"/>
+    <path d="M-6 -9l4.5 4.5 8.5-9" fill="none" stroke="#1D4ED8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-14" y="27" width="28" height="3" rx="1.5" fill="#B9C7DB"/>
+  </g>
+</svg>

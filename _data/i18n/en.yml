@@ -1,0 +1,31 @@
+# UI strings (English). To add a language later, copy this file to
+# da.yml / sv.yml and translate. Page content lives in the pages and
+# _offerings/ files, not here.
+skip_link: Skip to content
+menu_open: Open menu
+menu_close: Close menu
+nav_label: Main
+home: Home
+book_intro_call: Book an intro call
+schedule_calendly: Schedule via Calendly
+core_offering: Core offering
+supporting_offerings: Supporting offerings
+supporting_offering: Supporting offering
+whats_included: What's included
+who_its_for: Who it's for
+decision_makers: Decision-makers
+read_more: Read more
+other_offerings: Other offerings
+footer_nav: Site map
+offerings: Offerings
+about_contact: About & contact
+company_story: Company story
+email: Email
+phone: Phone
+address: Address
+legal_information: Legal information
+legal_name: Legal name
+trading_as: Trading as
+org_number: Org. number (SE)
+vat_number: VAT number
+ceo: CEO

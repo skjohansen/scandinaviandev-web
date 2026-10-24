@@ -1,0 +1,40 @@
+{%- comment -%}
+  Core offering block + supporting offering cards.
+  Used on the homepage and /offerings/.
+{%- endcomment -%}
+{%- assign offerings = site.offerings | sort: "order" -%}
+{%- assign core = offerings | where: "kind", "core" | first -%}
+{%- assign supporting = offerings | where: "kind", "supporting" -%}
+
+<section class="section" id="offerings">
+  <div class="container">
+    <div class="core-offering">
+      <div class="core-offering__text">
+        <p class="eyebrow">{{ t.core_offering }}</p>
+        <h2 class="core-offering__title"><a href="{{ core.url | relative_url }}">{{ core.title }}</a></h2>
+        <p class="lead">{{ core.home_lead }}</p>
+        {% include check-list.html items=core.home_points class="check-list--2col" %}
+      </div>
+      <figure class="core-offering__media media-frame">
+        {% include illustrations/{{ core.home_illustration }} %}
+      </figure>
+    </div>
+
+    <hr class="divider">
+
+    <h2 class="label">{{ t.supporting_offerings }}</h2>
+    <ul class="card-grid" role="list">
+      {% for o in supporting %}
+        <li>
+          <article class="offer-card">
+            <h3 class="offer-card__title">
+              <a href="{{ o.url | relative_url }}">{{ o.card_title }}</a>
+            </h3>
+            <p class="offer-card__tag">{{ o.card_tag }}</p>
+            <p>{{ o.card_text }}</p>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

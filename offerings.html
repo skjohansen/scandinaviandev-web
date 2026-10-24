@@ -1,0 +1,38 @@
+---
+title: Offerings
+description: >-
+  Product Security Engineering Training, Security Champions, Tabletop
+  Exercises, Fractional CISO and Security Due Diligence for growing product
+  companies.
+permalink: /offerings/
+# Old site URLs (DA/EN/SV) that now point here
+redirect_from:
+  - /tjenester/
+  - /en/services/
+  - /sv/tjanster/
+  - /kompetencer/
+  - /en/competencies/
+  - /sv/kompetenser/
+  - /tjenester/ai-sikkerhed/
+  - /en/services/ai-security/
+  - /sv/tjanster/ai-sakerhet/
+---
+{%- assign t = site.data.i18n[site.lang] -%}
+
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">Offerings</p>
+    <h1>Security built into how you build</h1>
+    <p class="lead">
+      One core training programme that turns your developers into Product
+      Security Engineers, and four supporting offerings for culture, incident
+      readiness, leadership and deals.
+    </p>
+  </div>
+</section>
+
+{% include offerings-overview.html %}
+
+{% include cta.html
+  title="Not sure which one fits?"
+  text="Book a 30-minute call and we'll work out where to start." %}

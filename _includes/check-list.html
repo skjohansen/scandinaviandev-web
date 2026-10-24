@@ -1,0 +1,6 @@
+{%- comment -%} Params: items (array), class (optional) {%- endcomment -%}
+<ul class="check-list {{ include.class }}">
+  {% for item in include.items %}
+    <li>{% include icon.html name="check" %}<span>{{ item }}</span></li>
+  {% endfor %}
+</ul>

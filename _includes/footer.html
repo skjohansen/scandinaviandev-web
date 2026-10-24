@@ -1,51 +1,39 @@
-{% assign strings = site.data[page.lang].strings %}
-{% assign lang = page.lang | default: "da" %}
-{% if lang == "da" %}
-  {% assign prefix = "" %}
-{% elsif lang == "en" %}
-  {% assign prefix = "/en" %}
-{% else %}
-  {% assign prefix = "/sv" %}
-{% endif %}
-
-<footer class="footer">
+{%- comment -%}
+  Sitemap-style footer.
+  Three columns: section link + dot-separated sub-links.
+{%- endcomment -%}
+{%- assign c = site.contact -%}
+{%- assign footer_offerings = site.offerings | sort: "order" -%}
+<footer class="site-footer">
   <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ScandinavianDev">
-        <p>{{ strings.footer_description }}</p>
+    <nav class="site-footer__grid" aria-label="{{ t.footer_nav }}">
+      <div class="footer-col">
+        <a class="footer-col__title" href="{{ '/' | relative_url }}">{{ t.home }}</a>
+        <ul class="footer-col__links">
+          <li><a href="{{ '/' | relative_url }}">{{ site.tagline }}</a></li>
+          <li><a href="{{ site.calendly_url }}" target="_blank" rel="noopener">{{ t.book_intro_call }}</a></li>
+        </ul>
       </div>
 
-      <div class="footer__col">
-        <h4>{{ strings.footer_nav_title }}</h4>
-        <ul>
-          {% for item in strings.nav %}
-          <li><a href="{{ prefix | append: item.url | relative_url }}">{{ item.label }}</a></li>
+      <div class="footer-col">
+        <a class="footer-col__title" href="{{ '/offerings/' | relative_url }}">{{ t.offerings }}</a>
+        <ul class="footer-col__links">
+          {% for o in footer_offerings %}
+            <li><a href="{{ o.url | relative_url }}">{{ o.footer_title | default: o.card_title | default: o.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
 
-      <div class="footer__col">
-        <h4>{{ strings.footer_lang_title }}</h4>
-        <ul>
-          <li><a href="/">Dansk</a></li>
-          <li><a href="/en/">English</a></li>
-          <li><a href="/sv/">Svenska</a></li>
+      <div class="footer-col">
+        <a class="footer-col__title" href="{{ '/contact/' | relative_url }}">{{ t.about_contact }}</a>
+        <ul class="footer-col__links">
+          <li><a href="{{ '/contact/#story' | relative_url }}">{{ t.company_story }}</a></li>
+          <li><a href="{{ '/contact/#legal' | relative_url }}">{{ t.legal_information }}</a></li>
+          <li><a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
         </ul>
       </div>
+    </nav>
 
-      <div class="footer__col">
-        <h4>{{ strings.footer_contact_title }}</h4>
-        <ul>
-          <li>{{ strings.contact_email }}</li>
-          <li>{{ strings.contact_phone }}</li>
-          <li>{{ strings.contact_address }}</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <span>&copy; {{ 'now' | date: '%Y' }} ScandinavianDev. {{ strings.footer_rights }}</span>
-    </div>
+    <p class="site-footer__bottom">&copy; {{ site.time | date: '%Y' }} {{ site.legal.name }}, trading as {{ site.legal.trading_as }}.</p>
   </div>
 </footer>
