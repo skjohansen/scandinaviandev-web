@@ -74,6 +74,7 @@ exclude:
   - docker-compose.yml
   - .devcontainer
   - README.md
+  - CHANGELOG.md
   - CLAUDE.md
   - docs/
   - vendor/
