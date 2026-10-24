@@ -37,17 +37,3 @@ layout: default
 </article>
 
 {% include cta.html title=page.cta_title text=page.cta_text %}
-
-{%- assign others = site.offerings | sort: "order" -%}
-<nav class="section section--tight" aria-labelledby="other-offerings">
-  <div class="container">
-    <h2 class="label" id="other-offerings">{{ t.other_offerings }}</h2>
-    <ul class="pill-list">
-      {% for o in others %}
-        {% unless o.url == page.url %}
-          <li><a href="{{ o.url | relative_url }}">{{ o.card_title | default: o.title }}</a></li>
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-</nav>

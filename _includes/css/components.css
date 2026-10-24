@@ -57,19 +57,6 @@
   .check-list--2col { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-6); }
 }
 
-/* ---------- Pill links (other offerings) ---------- */
-.pill-list { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-.pill-list a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--c-border);
-  border-radius: 999px;
-  color: var(--c-text);
-  font-size: var(--fs-sm);
-  font-weight: 500;
-}
-.pill-list a:hover { border-color: var(--c-primary); color: var(--c-primary); text-decoration: none; }
-
 /* ---------- Supporting offering card ---------- */
 .card-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
 @media (min-width: 768px)  { .card-grid { grid-template-columns: repeat(2, 1fr); } }
