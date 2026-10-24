@@ -100,6 +100,20 @@ under ~250 KB.
 
 The homepage hero image is `assets/images/hero-scandinavia.jpg`.
 
+### Logo and icons
+
+| File | Used for |
+| --- | --- |
+| `_includes/logo-mark.svg` | Shield logo in the header (inline; colour follows the site blue) |
+| `assets/images/logo-mark.svg` | Standalone vector logo |
+| `assets/images/favicon.svg`, `favicon.png` | Browser tab icon |
+| `assets/images/apple-touch-icon.png` | iPhone/iPad home screen icon |
+| `assets/images/logo-512.png` | Logo for search engines |
+| `assets/images/og-image.png` | Share thumbnail (LinkedIn, Slack, etc.), 1200×630 |
+
+The share thumbnail is set for every page in `_config.yml` (`defaults` →
+`image`). A page can use its own by setting `image:` in its front matter.
+
 ## Styling
 
 CSS is plain CSS split into small files in `_includes/css/`. Jekyll joins them
@@ -179,7 +193,7 @@ _includes/illustrations/ Inline SVG illustrations
 _includes/css/           CSS partials
 assets/css/main.css      Joins the CSS partials into one file at build time
 assets/js/main.js        Mobile menu (the site also works without JavaScript)
-assets/images/           Hero image, favicon
+assets/images/           Hero image, logo, favicons, share thumbnail
 index.html               Homepage
 offerings.html           /offerings/
 contact.html             /contact/ (About & Contact)

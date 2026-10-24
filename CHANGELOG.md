@@ -21,6 +21,8 @@ Replaces the previous Danish/English/Swedish site with the new English design.
 - About & Contact page with company story and legal information.
 - Calendly booking on every call-to-action button.
 - Sitemap-style footer.
+- Shield logo (vector) in the header, as the browser tab icon, home screen
+  icon and in a 1200×630 share thumbnail for social media.
 - Inline SVG illustrations for the homepage and every offering page.
 - SEO tags, `sitemap.xml`, `robots.txt` and a 404 page.
 - Redirects from all previous DA/EN/SV URLs to their closest new page.
