@@ -22,11 +22,13 @@
 .value-props p { margin: 0; font-size: var(--fs-sm); }
 
 .hero__media { background: var(--c-paper); }
-.hero__media img { width: 100%; height: 340px; object-fit: cover; object-position: 60% 60%; }
+/* brightness/contrast lift + multiply turn the image's off-white, slightly
+   shaded background into pure page white, so the map floats on the page */
+.hero__media img { width: 100%; height: 380px; padding: var(--space-4) var(--gutter); object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.06); }
 
 @media (min-width: 768px) {
   .value-props { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); text-align: center; }
-  .hero__media img { height: 460px; }
+  .hero__media img { height: 520px; }
 }
 
 @media (min-width: 1024px) {
@@ -41,7 +43,7 @@
   }
   .hero__content > * { max-width: var(--content); }
   .hero__media { position: relative; }
-  .hero__media img { position: absolute; inset: 0; height: 100%; object-position: center; }
+  .hero__media img { position: absolute; inset: 0; height: 100%; padding: var(--space-6) var(--space-6) var(--space-6) 0; object-position: center; }
 }
 
 /* ---------- Page intro (Offerings, Contact, 404) ---------- */
