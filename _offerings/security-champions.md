@@ -28,4 +28,9 @@ decision_makers: CEO, CISO or Head of Engineering, usually alongside HR for roll
 illustration: security-champions.svg   # inline SVG in _includes/illustrations/ (used instead of `image`)
 cta_title: Make security everyone's job, not one team's problem
 cta_text: Book a 30-minute call to scope a champions programme.
+# Offerings overview ("Five offerings, one path")
+path_step: People
+path_title: Security Champions
+path_text: A security-first culture that reaches every team, technical or not.
+path_icon: champions
 ---

@@ -27,4 +27,9 @@ decision_makers: CEO, CIO, CTO or CISO.
 illustration: tabletop-flow.svg   # inline SVG in _includes/illustrations/ (used instead of `image`)
 cta_title: Find the gaps in your response before an attacker does
 cta_text: Book a 30-minute call to design your first scenario.
+# Offerings overview ("Five offerings, one path")
+path_step: Practice
+path_title: Tabletop Exercises
+path_text: Rehearse real breaches and find the gaps in your response plan.
+path_icon: tabletop
 ---

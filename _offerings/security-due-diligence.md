@@ -28,4 +28,9 @@ decision_makers: CEO and CFO, with the CTO supplying the technical detail.
 illustration: due-diligence.svg   # inline SVG in _includes/illustrations/ (used instead of `image`)
 cta_title: Walk into the deal with your security documented
 cta_text: Book a 30-minute call before the data room opens.
+# Offerings overview ("Five offerings, one path")
+path_step: Growth
+path_title: Due Diligence
+path_text: Documented security for investors, partners and buyers.
+path_icon: diligence
 ---

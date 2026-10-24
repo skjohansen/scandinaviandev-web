@@ -27,6 +27,11 @@ decision_makers: CEO and CFO, usually with the CTO in the room.
 illustration: fractional-ciso.svg   # inline SVG in _includes/illustrations/ (used instead of `image`)
 cta_title: Executive security leadership, sized to your company
 cta_text: Book a 30-minute call to talk through your regulatory exposure.
+# Offerings overview ("Five offerings, one path")
+path_step: Governance
+path_title: Fractional CISO
+path_text: Security leadership and compliance roadmaps without a full-time hire.
+path_icon: ciso
 # Old site URLs (DA/EN/SV) that now point here
 redirect_from:
   - /tjenester/grc-og-compliance/

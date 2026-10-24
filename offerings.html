@@ -1,9 +1,8 @@
 ---
 title: Offerings
 description: >-
-  Product Security Engineering Training, Security Champions, Tabletop
-  Exercises, Fractional CISO and Security Due Diligence for growing product
-  companies.
+  Five offerings, one path: Product Security Engineering Training, Security
+  Champions, Tabletop Exercises, Fractional CISO and Security Due Diligence.
 permalink: /offerings/
 # Old site URLs (DA/EN/SV) that now point here
 redirect_from:
@@ -18,21 +17,47 @@ redirect_from:
   - /sv/tjanster/ai-sakerhet/
 ---
 {%- assign t = site.data.i18n[site.lang] -%}
+{%- assign offerings = site.offerings | sort: "order" -%}
+{% include illustrations/offering-icons.svg %}
 
 <section class="page-intro">
   <div class="container">
-    <p class="eyebrow">Offerings</p>
-    <h1>Security built into how you build</h1>
+    <p class="eyebrow">Offerings overview</p>
+    <h1>Five offerings, one path</h1>
     <p class="lead">
-      One core training programme that turns your developers into Product
-      Security Engineers, and four supporting offerings for culture, incident
-      readiness, leadership and deals.
+      Training builds the foundation. Every service after it extends that
+      security into culture, response, governance and growth.
     </p>
   </div>
 </section>
 
-{% include offerings-overview.html %}
+<section class="section section--tight offerings-path">
+  <div class="container">
+    {%- comment -%} Tablet and desktop: one wide illustration {%- endcomment -%}
+    <div class="offerings-path__visual media-frame">
+      {% include illustrations/offerings-path.svg %}
+    </div>
+
+    <ol class="offerings-path__steps" role="list">
+      {% for o in offerings %}
+        <li class="path-step">
+          {%- comment -%} Mobile: one icon per offering {%- endcomment -%}
+          <svg class="path-step__icon" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="3"/>
+            <use href="#path-icon-{{ o.path_icon }}" x="28" y="28" width="64" height="64"
+                 fill="none" stroke="#1E2F7A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="path-step__text">
+            <p class="path-step__label">{{ forloop.index | prepend: "0" }} {{ o.path_step }}</p>
+            <h2 class="path-step__title"><a href="{{ o.url | relative_url }}">{{ o.path_title }}</a></h2>
+            <p>{{ o.path_text }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
 {% include cta.html
-  title="Not sure which one fits?"
-  text="Book a 30-minute call and we'll work out where to start." %}
+  title="Not sure where to start?"
+  text="Book a 30-minute call and we will map the first step for your team." %}

@@ -45,7 +45,7 @@ Most text lives in a few files, so you rarely need to touch the HTML.
 | What | Where |
 | --- | --- |
 | Homepage hero, value props | `index.html` |
-| Offerings overview intro | `offerings.html` |
+| Offerings overview ("Five offerings, one path") intro | `offerings.html` |
 | Each offering page (text, lists, illustration, call to action) | `_offerings/<name>.md` |
 | About & Contact page text | `contact.html` |
 | Calendly link | `_config.yml` → `calendly_url` |
@@ -70,6 +70,10 @@ Every "Book an intro call" and "Schedule via Calendly" button uses
    - `eyebrow`, `title`, `lead`, `included`, `audience`, `decision_makers`
    - `card_title`, `card_tag`, `card_text`: the card on the homepage
    - `cta_title`, `cta_text`: the dark banner at the bottom of the page
+   - `path_step`, `path_title`, `path_text`, `path_icon`: the step on the
+     offerings overview page (icons live in
+     `_includes/illustrations/offering-icons.svg`; the wide desktop
+     illustration is `_includes/illustrations/offerings-path.svg`)
    - `illustration` or `image`: see below
 3. Save. The homepage, offerings overview, footer and "Other offerings" links
    pick it up automatically.

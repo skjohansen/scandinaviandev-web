@@ -10,7 +10,9 @@ Replaces the previous Danish/English/Swedish site with the new English design.
 
 - New homepage: hero ("Security as a quality parameter"), core offering,
   supporting offerings and booking banner.
-- Offerings overview page and one page per offering, all from a single template:
+- Offerings overview page ("Five offerings, one path"): one wide illustration
+  on tablet and desktop, one icon per offering on mobile.
+- One page per offering, all from a single template:
   - Product Security Engineering Training (core offering)
   - Security Champions Training
   - Tabletop Exercise Facilitation

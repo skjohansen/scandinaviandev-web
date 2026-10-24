@@ -49,6 +49,63 @@
 .page-intro .lead { max-width: 60ch; margin-bottom: var(--space-6); }
 @media (min-width: 1024px) { .page-intro { padding-block: var(--space-9) var(--space-4); } }
 
+/* ---------- Offerings overview: "Five offerings, one path" ---------- */
+/* Hidden icon sprite (not display:none, so <use> references keep working) */
+.svg-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.offerings-path__visual { display: none; }
+.offerings-path__wide { display: block; width: 100%; height: auto; }
+
+.offerings-path__steps { display: grid; gap: var(--space-6); margin: 0; padding: 0; list-style: none; }
+.path-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+/* Mobile: thin connector between the step icons */
+.path-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 43px;
+  top: 96px;
+  bottom: calc(-1 * var(--space-6) + 8px);
+  width: 2px;
+  background: var(--c-primary);
+  opacity: 0.35;
+}
+.path-step__icon { width: 88px; height: 88px; }
+.path-step__label {
+  margin: var(--space-2) 0 var(--space-1);
+  color: var(--c-accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+.path-step__title { margin-bottom: var(--space-2); font-size: 1.1875rem; }
+.path-step__title a { color: var(--c-ink); }
+.path-step__title a:hover { color: var(--c-primary); text-decoration: none; }
+.path-step__text p:last-child { margin: 0; font-size: var(--fs-sm); }
+
+/* Tablet and up: wide illustration, five columns aligned under its circles.
+   Gap = 32/1728 of the row, the same ratio used in offerings-path.svg. */
+@media (min-width: 768px) {
+  .offerings-path__visual { display: block; margin-bottom: var(--space-6); }
+  .offerings-path__steps { grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: calc(100% * 32 / 1728); }
+  .path-step { display: block; }
+  .path-step::after, .path-step:not(:last-child)::after { display: none; }
+  .path-step__icon { display: none; }
+  .path-step__label { margin-top: 0; letter-spacing: 0.1em; }
+  .path-step__title { font-size: 1rem; }
+  .path-step__text p:last-child { font-size: 0.8125rem; }
+}
+@media (min-width: 1280px) {
+  .path-step__title { font-size: 1.25rem; }
+  .path-step__text p:last-child { font-size: var(--fs-sm); }
+}
+
 /* ---------- Core offering block ---------- */
 .core-offering { display: grid; gap: var(--space-7); align-items: center; }
 .core-offering__title { font-size: clamp(1.75rem, 1.1rem + 2vw, 2.875rem); margin-bottom: var(--space-4); }

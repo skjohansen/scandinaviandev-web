@@ -41,6 +41,11 @@ decision_makers: >-
 illustration: secure-sdlc.svg   # inline SVG in _includes/illustrations/ (used instead of `image`)
 cta_title: Turn your developers into Product Security Engineers
 cta_text: Book a 30-minute call to map your current SDLC maturity.
+# Offerings overview ("Five offerings, one path")
+path_step: Foundation
+path_title: Engineering Training
+path_text: Developers become Product Security Engineers who own security across the lifecycle.
+path_icon: training
 # Old site URLs (DA/EN/SV) that now point here
 redirect_from:
   - /tjenester/preventiv-cybersikkerhed/
