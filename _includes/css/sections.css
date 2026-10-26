@@ -32,18 +32,25 @@
 }
 
 @media (min-width: 1024px) {
-  /* Text left, image bleeding to the right edge, full hero height */
-  .hero__inner { grid-template-columns: minmax(0, 1fr) 41.5vw; min-height: calc(100vh - var(--header-h)); }
+  /* Text left, map right. The hero is capped at the page width (same as
+     .container) and its height is capped too, so on very wide screens or
+     when zoomed out it scales with the rest of the page instead of
+     stretching to the window. Sizes are % of the hero, never vw/vh. */
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 41.5%);
+    max-width: calc(var(--container) + 2 * var(--gutter));
+    margin-inline: auto;
+    min-height: min(calc(100vh - var(--header-h)), 920px);
+  }
   .hero__content {
     align-self: center;
     padding-block: var(--space-9);
-    padding-inline-start: max(var(--gutter), calc((100vw - var(--container)) / 2));
-    padding-inline-end: var(--space-7);
+    padding-inline: var(--gutter) var(--space-7);
     max-width: none;
   }
   .hero__content > * { max-width: var(--content); }
   .hero__media { position: relative; }
-  .hero__media img { position: absolute; inset: 0; height: 100%; padding: var(--space-6) var(--space-6) var(--space-6) 0; object-position: center; }
+  .hero__media img { position: absolute; inset: 0; height: 100%; padding: var(--space-6) var(--gutter) var(--space-6) 0; object-position: center; }
 }
 
 /* ---------- Page intro (Offerings, Contact, 404) ---------- */
