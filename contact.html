@@ -60,14 +60,14 @@ redirect_from:
   <div class="container">
     <hr class="divider founder__divider">
     <div class="about__grid">
-      <div class="founder__text">
-        <p class="label founder__eyebrow">About the founder</p>
+      <div class="about__text">
+        <p class="eyebrow">About the founder</p>
         <h2 class="founder__name" id="founder-title">{{ f.name }}</h2>
         <p class="lead lead--strong">{{ f.lead }}</p>
         {% for p in f.bio %}<p>{{ p }}</p>{% endfor %}
         <hr class="divider divider--compact">
-        <p class="founder__quote">{{ f.quote }}</p>
-        <p class="founder__note">{{ f.note }}</p>
+        <p class="about__quote">{{ f.quote }}</p>
+        <p class="about__note">{{ f.note }}</p>
       </div>
 
       <aside class="legal-panel" aria-labelledby="founder-profile-heading">
