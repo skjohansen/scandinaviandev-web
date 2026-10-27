@@ -26,7 +26,7 @@ redirect_from:
       <p>
         The company was founded in 2019 with a deep focus on software development
         and the conviction that it deserves to be treated as an engineering
-        discipline — with the standards, rigour and accountability that word carries.
+        discipline, with the standards, rigour and accountability that word carries.
       </p>
       <p>
         Security is a quality attribute. Writing secure code has a positive effect
@@ -49,14 +49,40 @@ redirect_from:
         <div><dt>{{ t.address }}</dt><dd>{{ c.street }}, {{ c.postcode }} {{ c.city }}, {{ c.country }}</dd></div>
         <div><dt>{{ t.org_number }}</dt><dd>{{ l.org_number }}</dd></div>
         <div><dt>{{ t.vat_number }}</dt><dd>{{ l.vat_number }}</dd></div>
-        <div><dt>{{ t.ceo }}</dt><dd>{{ l.ceo }}</dd></div>
         <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ c.email }}">{{ c.email }}</a></dd></div>
       </dl>
     </aside>
   </div>
 </section>
 
+{%- assign f = site.data.founder -%}
+<section class="section section--tight founder" aria-labelledby="founder-title">
+  <div class="container">
+    <hr class="divider founder__divider">
+    <div class="about__grid">
+      <div class="founder__text">
+        <p class="label founder__eyebrow">About the founder</p>
+        <h2 class="founder__name" id="founder-title">{{ f.name }}</h2>
+        <p class="lead lead--strong">{{ f.lead }}</p>
+        {% for p in f.bio %}<p>{{ p }}</p>{% endfor %}
+        <hr class="divider divider--compact">
+        <p class="founder__quote">{{ f.quote }}</p>
+        <p class="founder__note">{{ f.note }}</p>
+      </div>
+
+      <aside class="legal-panel" aria-labelledby="founder-profile-heading">
+        <h3 class="legal-panel__title" id="founder-profile-heading">Founder profile</h3>
+        <dl class="legal-list">
+          {% for row in f.profile %}
+            <div><dt>{{ row.label }}</dt><dd>{% if row.url %}<a href="{{ row.url }}" rel="noopener">{{ row.value }}</a>{% else %}{{ row.value }}{% endif %}</dd></div>
+          {% endfor %}
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
 {%- capture cta_text -%}
-  <a href="mailto:{{ c.email }}">{{ c.email }}</a> — or book 30 minutes directly.
+  <a href="https://skjohansen.com" rel="noopener">skjohansen.com</a> · <a href="mailto:{{ c.email }}">{{ c.email }}</a>, or book 30 minutes directly.
 {%- endcapture -%}
 {% include cta.html title="Talk to the person who does the work" text=cta_text %}

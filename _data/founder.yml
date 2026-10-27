@@ -1,0 +1,27 @@
+# "About the founder" on /contact/ (About & Contact).
+name: Stephan Kaas Johansen
+lead: Stephan Kaas Johansen started Scandinavian dev in 2019. He is the founder, and the person who does the work.
+bio:
+  - Stephan has spent his career at the intersection of software development, cybersecurity and management, including roles as CTO at Lasia and fractional CISO with a focus on process and regulation. His specialty, long before it had a name, is usable security.
+  - He is educated at DTU, the Technical University of Denmark, with a Bachelor of Engineering in Electrical Engineering (IT specialization) and a Master of Engineering in Telecommunication, focused on interactive media. He discovered cybersecurity during his studies and interned at Protego A/S, at the time Denmark's leading cybersecurity company.
+  - Today, AI is reshaping how we build, secure and govern software. As a teacher, advisor and hands-on technologist, Stephan helps teams and leaders adapt without losing their edge, with practical, no-BS guidance that bridges innovation and regulation.
+  - He believes the best systems are built when engineers own not just the code, but the responsibility that comes with it, and that systems should work for people, not computers.
+quote: Security so easy to use that people don't try to work around it.
+note: Driven by the inner satisfaction of succeeding, Stephan's personal goal is to exceed all expectations.
+profile:
+  - label: Speciality
+    value: Usable security
+  - label: Previously
+    value: CTO at Lasia · Fractional CISO
+  - label: Education
+    value: "DTU, Technical University of Denmark<br>BEng Electrical Engineering · MEng Telecommunication"
+  - label: Focus
+    value: AI governance, cybersecurity and compliance
+  - label: Regulation
+    value: NIS2 · the AI Act · GDPR · the Data Act
+  - label: Website
+    value: skjohansen.com
+    url: "https://skjohansen.com"
+  - label: LinkedIn
+    value: Stephan Kaas Johansen
+    url: "https://www.linkedin.com/in/skjohansen/"
