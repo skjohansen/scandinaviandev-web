@@ -200,3 +200,7 @@
 
 /* ---------- 404 ---------- */
 .not-found { padding-bottom: var(--space-9); }
+
+/* ---------- About the founder (/contact/) ---------- */
+.founder__divider { margin: 0 0 var(--space-7); max-width: none; }
+.founder__name { margin-bottom: var(--space-6); font-size: var(--fs-h1); }
