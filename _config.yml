@@ -3,14 +3,14 @@
 
 title: ScandinavianDev
 wordmark: Scandinavian Dev
-tagline: Quality software is secure software
+tagline: Software, designed the Scandinavian way
 description: >-
-  Better software quality leads to better product security. Choose the quality
-  goal you need — maintainability, security, performance efficiency or
-  reliability (ISO/IEC 5055) — and we upskill the engineers you already have
-  to get there. Product security training, security champions, tabletop
-  exercises, fractional CISO and security due diligence for European product
-  teams.
+  Scandinavian Dev builds software the way Scandinavian design builds
+  furniture: minimal, purposeful, made to last. All four quality
+  characteristics of ISO/IEC 5055 share one goal — better software — and the
+  goal of security is resilience. We upskill the engineers you already have:
+  product security training, security champions, tabletop exercises,
+  fractional CISO and security due diligence for European product teams.
 url: "https://scandinavian.dev"
 logo: /assets/images/logo-512.png      # search engines (structured data)
 baseurl: ""
