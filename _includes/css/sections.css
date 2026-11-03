@@ -204,3 +204,78 @@
 /* ---------- About the founder (/contact/) ---------- */
 .founder__divider { margin: 0 0 var(--space-7); max-width: none; }
 .founder__name { margin-bottom: var(--space-6); font-size: var(--fs-h1); }
+
+
+/* ---------- Quality chooser (ISO/IEC 5055) ---------- */
+.quality-chooser h2 { margin-bottom: var(--space-4); }
+.quality-chooser .lead { max-width: 60ch; margin-bottom: var(--space-6); }
+
+.chooser__input { position: absolute; width: 1px; height: 1px; margin: -1px; opacity: 0; }
+
+.chooser__options {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+@media (min-width: 768px) {
+  .chooser__options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.chooser__option {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: none;
+}
+.chooser__option strong { color: var(--c-ink); font-size: 1.0625rem; letter-spacing: -0.01em; }
+.chooser__option span { color: var(--c-text); font-size: var(--fs-sm); }
+.chooser__option:hover { border-color: var(--c-primary); }
+#goal-maintainability:focus-visible + label[for="goal-maintainability"],
+#goal-security:focus-visible + label[for="goal-security"],
+#goal-performance:focus-visible + label[for="goal-performance"],
+#goal-reliability:focus-visible + label[for="goal-reliability"] { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+
+/* Selected card */
+#goal-maintainability:checked + label[for="goal-maintainability"],
+#goal-security:checked + label[for="goal-security"],
+#goal-performance:checked + label[for="goal-performance"],
+#goal-reliability:checked + label[for="goal-reliability"] {
+  border-color: var(--c-primary);
+  box-shadow: inset 0 0 0 1px var(--c-primary);
+}
+#goal-maintainability:checked + label[for="goal-maintainability"] strong,
+#goal-security:checked + label[for="goal-security"] strong,
+#goal-performance:checked + label[for="goal-performance"] strong,
+#goal-reliability:checked + label[for="goal-reliability"] strong { color: var(--c-primary); }
+
+/* Panels: hidden until a goal is chosen (needs :has); fallback shows all */
+.chooser__panel {
+  display: none;
+  padding: var(--space-6);
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+}
+.chooser__panel h3 { margin-bottom: var(--space-3); }
+.chooser__panel p { max-width: 68ch; }
+.chooser__panel p:last-child { margin-bottom: 0; font-weight: 500; }
+
+@supports selector(:has(*)) {
+  .chooser:has(#goal-maintainability:checked) #panel-maintainability,
+  .chooser:has(#goal-security:checked) #panel-security,
+  .chooser:has(#goal-performance:checked) #panel-performance,
+  .chooser:has(#goal-reliability:checked) #panel-reliability { display: block; }
+
+  .chooser:has(.chooser__input:checked) .chooser__hint { display: none; }
+}
+@supports not selector(:has(*)) {
+  .chooser__panel { display: block; }
+  .chooser__hint { display: none; }
+}
+@media (min-width: 1024px) {
+  .chooser__options { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); }
+}

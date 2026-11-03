@@ -3,12 +3,14 @@
 
 title: ScandinavianDev
 wordmark: Scandinavian Dev
-tagline: Security is a quality parameter
+tagline: Quality software is secure software
 description: >-
-  We upskill the engineers you already have, so security is built in from
-  day one instead of bolted on before launch. Product security training,
-  security champions, tabletop exercises, fractional CISO and security due
-  diligence for European product teams.
+  Better software quality leads to better product security. Choose the quality
+  goal you need — maintainability, security, performance efficiency or
+  reliability (ISO/IEC 5055) — and we upskill the engineers you already have
+  to get there. Product security training, security champions, tabletop
+  exercises, fractional CISO and security due diligence for European product
+  teams.
 url: "https://scandinavian.dev"
 logo: /assets/images/logo-512.png      # search engines (structured data)
 baseurl: ""
