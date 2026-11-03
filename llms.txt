@@ -1,0 +1,25 @@
+# Scandinavian Dev
+
+> Scandinavian Dev helps European product teams build quality software that is secure by design. Founded in 2019 by Stephan Kaas Johansen (CTO background, fractional CISO, DTU-educated engineer), based in Skara, Sweden. We upskill the engineers you already have — not consultants you can't find.
+
+All four quality characteristics of ISO/IEC 5055 — maintainability, security, performance efficiency and reliability — share one goal: better software. The goal of security is resilience: software that keeps working, even under attack. We work in the age of AI: readable, well-structured code is what your engineers and their AI tools can safely build, review and maintain together. CRA-ready security is framed as an opportunity: a ticket to sell connected products across the entire EU market, not a burden. Services: product security training, security champions programmes, tabletop exercises, fractional CISO and security due diligence.
+
+## Site
+
+- [Home](https://scandinavian.dev/): Who we are, the "What do you want to achieve?" quality chooser, and an overview of all five offerings.
+- [Offerings](https://scandinavian.dev/offerings/): The five offerings, one path — foundation, people, practice, governance, growth.
+- [About & contact](https://scandinavian.dev/contact/): The founder's story, contact details and legal information (Nonsultant AB, trading as Scandinavian dev).
+
+## Offerings
+
+- [Product Security Engineering Training](https://scandinavian.dev/offerings/product-security-engineering/): Core offering — turn the developers you have into Product Security Engineers who own security from first sketch to deployment. Security by design for SaaS and embedded products, AI-assisted threat modeling, GDPR/NIS2/AI Act ready.
+- [Security Champions](https://scandinavian.dev/offerings/security-champions/): Build a security-first culture across technical and non-technical staff who spot risks before code is written.
+- [Tabletop Exercises](https://scandinavian.dev/offerings/tabletop-exercises/): Simulate real breaches and compliance failures to stress-test response plans and business continuity.
+- [Fractional CISO](https://scandinavian.dev/offerings/fractional-ciso/): Strategic security leadership, regulatory roadmaps (GDPR, NIS2, AI Act, CRA) and risk governance without a full-time hire.
+- [Security Due Diligence](https://scandinavian.dev/offerings/security-due-diligence/): Assess and remediate security risks before investment rounds or enterprise deals, backed by a maturity report.
+
+## Optional
+
+- [Book an intro call](https://calendly.com/scandinavian-dev): 30-minute discovery call.
+- [Sitemap](https://scandinavian.dev/sitemap.xml): Every URL on the site.
+- [robots.txt](https://scandinavian.dev/robots.txt): Search engine rules.
