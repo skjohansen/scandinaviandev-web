@@ -234,23 +234,23 @@
 .chooser__option strong { color: var(--c-ink); font-size: 1.0625rem; letter-spacing: -0.01em; }
 .chooser__option span { color: var(--c-text); font-size: var(--fs-sm); }
 .chooser__option:hover { border-color: var(--c-primary); }
-#goal-maintainability:focus-visible + label[for="goal-maintainability"],
-#goal-security:focus-visible + label[for="goal-security"],
-#goal-performance:focus-visible + label[for="goal-performance"],
-#goal-reliability:focus-visible + label[for="goal-reliability"] { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+#goal-maintainability:focus-visible ~ .chooser__options label[for="goal-maintainability"],
+#goal-security:focus-visible ~ .chooser__options label[for="goal-security"],
+#goal-performance:focus-visible ~ .chooser__options label[for="goal-performance"],
+#goal-reliability:focus-visible ~ .chooser__options label[for="goal-reliability"] { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 
 /* Selected card */
-#goal-maintainability:checked + label[for="goal-maintainability"],
-#goal-security:checked + label[for="goal-security"],
-#goal-performance:checked + label[for="goal-performance"],
-#goal-reliability:checked + label[for="goal-reliability"] {
+#goal-maintainability:checked ~ .chooser__options label[for="goal-maintainability"],
+#goal-security:checked ~ .chooser__options label[for="goal-security"],
+#goal-performance:checked ~ .chooser__options label[for="goal-performance"],
+#goal-reliability:checked ~ .chooser__options label[for="goal-reliability"] {
   border-color: var(--c-primary);
   box-shadow: inset 0 0 0 1px var(--c-primary);
 }
-#goal-maintainability:checked + label[for="goal-maintainability"] strong,
-#goal-security:checked + label[for="goal-security"] strong,
-#goal-performance:checked + label[for="goal-performance"] strong,
-#goal-reliability:checked + label[for="goal-reliability"] strong { color: var(--c-primary); }
+#goal-maintainability:checked ~ .chooser__options label[for="goal-maintainability"] strong,
+#goal-security:checked ~ .chooser__options label[for="goal-security"] strong,
+#goal-performance:checked ~ .chooser__options label[for="goal-performance"] strong,
+#goal-reliability:checked ~ .chooser__options label[for="goal-reliability"] strong { color: var(--c-primary); }
 
 /* Panels: hidden until a goal is chosen (needs :has); fallback shows all */
 .chooser__panel {
