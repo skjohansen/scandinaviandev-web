@@ -7,7 +7,7 @@ tagline: Software, designed the Scandinavian way
 description: >-
   Scandinavian Dev builds software the way Scandinavian design builds
   furniture: minimal, purposeful, made to last. All four quality
-  characteristics of ISO/IEC 5055 share one goal — better software — and the
+  characteristics of software share one goal — better software — and the
   goal of security is resilience. We upskill the engineers you already have:
   product security training, security champions, tabletop exercises,
   fractional CISO and security due diligence for European product teams.
@@ -49,10 +49,14 @@ permalink: pretty
 markdown: kramdown
 
 # Offerings: one file per offering in _offerings/, sorted by `order`
+# Quality parameters: one information page per quality characteristic
 collections:
   offerings:
     output: true
     permalink: /offerings/:name/
+  quality:
+    output: true
+    permalink: /quality/:name/
 
 plugins:
   - jekyll-seo-tag
@@ -70,6 +74,11 @@ defaults:
       type: offerings
     values:
       layout: offering
+  - scope:
+      path: ""
+      type: quality
+    values:
+      layout: quality
 
 exclude:
   - Gemfile

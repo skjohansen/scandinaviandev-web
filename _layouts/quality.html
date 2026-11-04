@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{%- comment -%}
+  One template for every ISO/IEC 5055 quality parameter page.
+  Content comes from the front matter and body in _quality/<name>.md.
+  `offerings` is a list of offering slugs (filenames in _offerings/).
+{%- endcomment -%}
+{%- assign t = site.data.i18n[site.lang] -%}
+
+<article class="section quality-page">
+  <div class="container quality-page__grid">
+    <div class="quality-page__text">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+
+      {{ content }}
+
+      <h2 class="label">How we help</h2>
+      <ul class="quality-page__offerings" role="list">
+        {%- for slug in page.offerings -%}
+          {%- assign o = site.offerings | where: "slug", slug | first -%}
+          <li>
+            <article class="offer-card">
+              <h3 class="offer-card__title"><a href="{{ o.url | relative_url }}">{{ o.title }}</a></h3>
+              <p class="offer-card__tag">{{ o.card_tag | default: "Offering" }}</p>
+              <p>{{ o.card_text | default: o.lead }}</p>
+            </article>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- assign others = site.quality | where_exp: "q", "q.slug != page.slug" | sort: "order" -%}
+      <h2 class="label">The other quality characteristics</h2>
+      <ul class="quality-page__others" role="list">
+        {%- for q in others -%}
+          <li><a href="{{ q.url | relative_url }}">{{ q.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <figure class="quality-page__media media-frame">
+      {%- if page.image %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1440" height="2560" loading="lazy">
+      {%- else %}
+        {%- comment -%} Placeholder shown until page.image is set in the page
+          front matter (see the commented image line there). {%- endcomment -%}
+        <img class="quality-page__placeholder" src="{{ page.image_placeholder | relative_url }}" alt="Placeholder illustration for {{ page.title }}" width="1440" height="2560" loading="lazy">
+      {%- endif %}
+    </figure>
+  </div>
+</article>
+
+{% include cta.html title=page.cta_title text=page.cta_text %}

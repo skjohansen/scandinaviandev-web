@@ -1,7 +1,6 @@
 {%- comment -%}
-  "What do you want to achieve?" chooser based on the four software quality
-  characteristics of ISO/IEC 5055. Pure HTML/CSS (radio inputs + :checked/:has):
-  no JavaScript needed. Without :has support every panel stays visible.
+  "What do you want to achieve?" — four cards, one per quality
+  characteristic, each linking to its information page in _quality/.
 {%- endcomment -%}
 <section class="section quality-chooser" id="quality">
   <div class="container">
@@ -9,81 +8,28 @@
     <h2>What do you want to achieve?</h2>
     <p class="lead">
       The four following quality characteristics share one goal: better
-      software. Pick the one you are chasing; better software is more secure
-      software, and more secure software is more resilient software.
+      software. Pick the one you are chasing to see how we help you get there —
+      better software is more secure software, and more secure software is
+      more resilient software.
     </p>
 
-    <div class="chooser">
-      <input class="chooser__input" type="radio" name="quality-goal" id="goal-maintainability">
-      <input class="chooser__input" type="radio" name="quality-goal" id="goal-security">
-      <input class="chooser__input" type="radio" name="quality-goal" id="goal-performance">
-      <input class="chooser__input" type="radio" name="quality-goal" id="goal-reliability">
-
-      <div class="chooser__options" role="presentation">
-        <label class="chooser__option" for="goal-maintainability">
-          <strong>Maintainability</strong>
-          <span>Code the next engineer — and the AI — can read is code they can both secure.</span>
-        </label>
-        <label class="chooser__option" for="goal-security">
-          <strong>Security</strong>
-          <span>Protection of information and data, built in from the first sketch.</span>
-        </label>
-        <label class="chooser__option" for="goal-performance">
-          <strong>Performance Efficiency</strong>
-          <span>Software that performs well under load — and stays in control when it does.</span>
-        </label>
-        <label class="chooser__option" for="goal-reliability">
-          <strong>Reliability</strong>
-          <span>Systems that keep doing what they should, even under stress and failure.</span>
-        </label>
-      </div>
-
-      <div class="chooser__panels">
-        <div class="chooser__panel" id="panel-maintainability">
-          <h3>Unmaintainable code is unpatchable code</h3>
-          <p>
-            When the next CVE lands in a dependency you use, the question is how fast
-            you can change your code safely. We embed secure patterns, reviews and
-            automated checks into your SDLC, so a security patch is a quick fix —
-            not archaeology. In the age of AI-assisted development this matters
-            twice over: readable, well-structured code is what your AI tools can
-            safely generate, review and maintain alongside your engineers.
-          </p>
-          <p><a href="{{ '/offerings/product-security-engineering/' | relative_url }}">See how: Product Security Engineering →</a></p>
-        </div>
-        <div class="chooser__panel" id="panel-security">
-          <h3>The goal of security is resilience</h3>
-          <p>
-            Security built in from day one instead of bolted on before launch.
-            Not locks and fear — software that keeps working, even under attack.
-            Threat modelling, secure code and security automation in your
-            pipeline, practised by the engineers you already have. And with the
-            EU Cyber Resilience Act, solid security is more than hygiene — it is
-            your ticket to sell connected products across the entire EU market.
-          </p>
-          <p><a href="{{ '/offerings/product-security-engineering/' | relative_url }}">See how: Product Security Engineering →</a></p>
-        </div>
-        <div class="chooser__panel" id="panel-performance">
-          <h3>Fast software is disciplined software</h3>
-          <p>
-            The practices that keep software fast — lean dependencies, automated
-            tests, tight feedback loops — are the same ones that keep vulnerabilities
-            out. Security checks run in the pipeline, without slowing your releases.
-          </p>
-          <p><a href="{{ '/offerings/security-champions/' | relative_url }}">See how: Security Champions →</a></p>
-        </div>
-        <div class="chooser__panel" id="panel-reliability">
-          <h3>Resilience is a quality you can rehearse</h3>
-          <p>
-            Reliable systems assume things will fail and plan for it. We simulate real
-            breaches and failures with your leadership and engineers, so the gaps in
-            your response are found during rehearsal — not during the incident.
-          </p>
-          <p><a href="{{ '/offerings/tabletop-exercises/' | relative_url }}">See how: Tabletop Exercises →</a></p>
-        </div>
-      </div>
-
-      <p class="chooser__hint">Select a goal to see how we help.</p>
+    <div class="chooser__options">
+      <a class="chooser__option" href="{{ '/quality/maintainability/' | relative_url }}">
+        <strong>Maintainability</strong>
+        <span>Code the next engineer — and the AI — can read is code they can both secure.</span>
+      </a>
+      <a class="chooser__option" href="{{ '/quality/security/' | relative_url }}">
+        <strong>Security</strong>
+        <span>Protection of information and data — with resilience as the goal.</span>
+      </a>
+      <a class="chooser__option" href="{{ '/quality/performance-efficiency/' | relative_url }}">
+        <strong>Performance Efficiency</strong>
+        <span>Software that performs well under load — and stays in control when it does.</span>
+      </a>
+      <a class="chooser__option" href="{{ '/quality/reliability/' | relative_url }}">
+        <strong>Reliability</strong>
+        <span>Systems that keep doing what they should, even under stress and failure.</span>
+      </a>
     </div>
   </div>
 </section>

@@ -8,6 +8,13 @@ description: >-
   Turn the developers you already have into Product Security Engineers who
   own security across the full lifecycle, from ideation to decommissioning.
 
+# Card on quality pages
+card_tag: Core offering
+card_text: >-
+  Turn the developers you already have into Product Security Engineers who
+  own security from first sketch to deployment — with secure patterns,
+  automated checks and AI-assisted tooling in your SDLC.
+
 # Homepage "core offering" block
 home_lead: >-
   Transform your developers into Product Security Engineers who own security
