@@ -43,8 +43,8 @@ layout: default
       {%- if page.image %}
         <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1440" height="2560" loading="lazy">
       {%- else %}
-        {%- comment -%} Placeholder: drop in the real image at the path below
-          (1440x2560 px) and it appears here automatically. {%- endcomment -%}
+        {%- comment -%} Placeholder shown until page.image is set in the page
+          front matter (see the commented image line there). {%- endcomment -%}
         <img class="quality-page__placeholder" src="{{ page.image_placeholder | relative_url }}" alt="Placeholder illustration for {{ page.title }}" width="1440" height="2560" loading="lazy">
       {%- endif %}
     </figure>

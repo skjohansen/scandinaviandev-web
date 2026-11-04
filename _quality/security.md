@@ -9,9 +9,11 @@ lead: >-
   Security is the degree to which a product protects information and data,
   so that people, systems or other products have the level of data access
   appropriate to their types and levels of authorisation.
-# Attribute image (1440x2560 px). Swap the placeholder by saving the real
-# picture at assets/images/quality/security.jpg — nothing else to change.
-image: /assets/images/quality/security.jpg
+# Attribute image (1440x2560 px). Save your picture as
+# assets/images/quality/security.jpg in the repo, then uncomment the image
+# line below — the placeholder disappears and your image shows.
+# image: /assets/images/quality/security.jpg
+image_placeholder: /assets/images/quality/placeholder-security.svg
 image_alt: Illustration representing security and resilience: protection of information and data
 offerings:
   - product-security-engineering

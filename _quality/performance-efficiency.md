@@ -9,9 +9,11 @@ lead: >-
   Performance efficiency is how well software performs under a given
   workload — within the time, throughput and resource constraints you
   have committed to.
-# Attribute image (1440x2560 px). Swap the placeholder by saving the real
-# picture at assets/images/quality/performance-efficiency.jpg — nothing else to change.
-image: /assets/images/quality/performance-efficiency.jpg
+# Attribute image (1440x2560 px). Save your picture as
+# assets/images/quality/performance-efficiency.jpg in the repo, then uncomment the image
+# line below — the placeholder disappears and your image shows.
+# image: /assets/images/quality/performance-efficiency.jpg
+image_placeholder: /assets/images/quality/placeholder-performance-efficiency.svg
 image_alt: Illustration representing performance efficiency: fast, disciplined software under load
 offerings:
   - product-security-engineering
