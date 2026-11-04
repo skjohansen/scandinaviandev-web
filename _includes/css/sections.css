@@ -262,3 +262,12 @@
 }
 .quality-page__others a:hover { border-color: var(--c-primary); color: var(--c-primary); text-decoration: none; }
 .quality-page__others a:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+
+/* Quality page: portrait attribute image (1440x2560) */
+.quality-page__grid { display: grid; gap: var(--space-7); align-items: start; }
+.quality-page__media { max-width: 420px; margin-inline: auto; }
+.quality-page__media img { width: 100%; height: auto; display: block; }
+@media (min-width: 1024px) {
+  .quality-page__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: var(--space-8); }
+  .quality-page__media { max-width: none; position: sticky; top: calc(var(--header-h) + var(--space-4)); }
+}

@@ -9,6 +9,10 @@ lead: >-
   Reliability is how well a system keeps performing its intended functions,
   under stated conditions and for a stated period of time — including when
   things go wrong.
+# Attribute image (1440x2560 px). Swap the placeholder by saving the real
+# picture at assets/images/quality/reliability.jpg — nothing else to change.
+image: /assets/images/quality/reliability.jpg
+image_alt: Illustration representing reliability: systems that keep working under stress and failure
 offerings:
   - tabletop-exercises
   - security-due-diligence

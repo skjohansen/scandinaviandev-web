@@ -9,6 +9,10 @@ lead: >-
   Performance efficiency is how well software performs under a given
   workload — within the time, throughput and resource constraints you
   have committed to.
+# Attribute image (1440x2560 px). Swap the placeholder by saving the real
+# picture at assets/images/quality/performance-efficiency.jpg — nothing else to change.
+image: /assets/images/quality/performance-efficiency.jpg
+image_alt: Illustration representing performance efficiency: fast, disciplined software under load
 offerings:
   - product-security-engineering
   - security-champions

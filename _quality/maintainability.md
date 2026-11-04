@@ -8,6 +8,10 @@ order: 1
 lead: >-
   Maintainability is the ease with which software can be analysed, modified
   and tested — how well it accepts change without breaking.
+# Attribute image (1440x2560 px). Swap the placeholder by saving the real
+# picture at assets/images/quality/maintainability.jpg — nothing else to change.
+image: /assets/images/quality/maintainability.jpg
+image_alt: Illustration representing maintainability: modular, readable code that engineers and AI can both work with
 offerings:
   - product-security-engineering
   - security-champions

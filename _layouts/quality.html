@@ -8,7 +8,7 @@ layout: default
 {%- endcomment -%}
 
 <article class="section quality-page">
-  <div class="container">
+  <div class="container quality-page__grid">
     <div class="quality-page__text">
       <p class="eyebrow">{{ page.eyebrow }}</p>
       <h1>{{ page.title }}</h1>
@@ -38,6 +38,16 @@ layout: default
         {%- endfor -%}
       </ul>
     </div>
+
+    <figure class="quality-page__media media-frame">
+      {%- if page.image %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1440" height="2560" loading="lazy">
+      {%- else %}
+        {%- comment -%} Placeholder: drop in the real image at the path below
+          (1440x2560 px) and it appears here automatically. {%- endcomment -%}
+        <img class="quality-page__placeholder" src="{{ page.image_placeholder | relative_url }}" alt="Placeholder illustration for {{ page.title }}" width="1440" height="2560" loading="lazy">
+      {%- endif %}
+    </figure>
   </div>
 </article>
 
