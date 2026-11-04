@@ -247,3 +247,18 @@
 .quality-page__offerings { display: grid; gap: var(--space-5); margin: 0; padding: 0; list-style: none; }
 @media (min-width: 768px) { .quality-page__offerings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .quality-page { padding-top: var(--space-8); } }
+
+/* Quality page: links to the other characteristics */
+.quality-page__others { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+.quality-page__others a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  background: var(--c-surface);
+  color: var(--c-ink);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.quality-page__others a:hover { border-color: var(--c-primary); color: var(--c-primary); text-decoration: none; }
+.quality-page__others a:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }

@@ -29,6 +29,14 @@ layout: default
           </li>
         {%- endfor -%}
       </ul>
+
+      {%- assign others = site.quality | where_exp: "q", "q.slug != page.slug" | sort: "order" -%}
+      <h2 class="label">The other quality characteristics</h2>
+      <ul class="quality-page__others" role="list">
+        {%- for q in others -%}
+          <li><a href="{{ q.url | relative_url }}">{{ q.title }}</a></li>
+        {%- endfor -%}
+      </ul>
     </div>
   </div>
 </article>
