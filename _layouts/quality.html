@@ -23,8 +23,8 @@ layout: default
           <li>
             <article class="offer-card">
               <h3 class="offer-card__title"><a href="{{ o.url | relative_url }}">{{ o.title }}</a></h3>
-              <p class="offer-card__tag">{{ o.card_tag }}</p>
-              <p>{{ o.card_text }}</p>
+              <p class="offer-card__tag">{{ o.card_tag | default: "Offering" }}</p>
+              <p>{{ o.card_text | default: o.lead }}</p>
             </article>
           </li>
         {%- endfor -%}
