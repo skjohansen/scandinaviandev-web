@@ -206,7 +206,7 @@
 .founder__name { margin-bottom: var(--space-6); font-size: var(--fs-h1); }
 
 
-/* ---------- Quality chooser (ISO/IEC 5055) ---------- */
+/* ---------- Quality chooser ---------- */
 .quality-chooser h2 { margin-bottom: var(--space-4); }
 .quality-chooser .lead { max-width: 60ch; margin-bottom: var(--space-6); }
 
