@@ -1,10 +1,9 @@
 ---
 title: Performance Efficiency
 description: >-
-  Performance efficiency is one of the four software quality characteristics
-  of ISO/IEC 5055. Fast software is disciplined software — and the same
-  discipline keeps vulnerabilities out.
-eyebrow: ISO/IEC 5055 quality characteristic 03
+  Fast software is disciplined software — and the same discipline keeps
+  vulnerabilities out.
+eyebrow: Quality characteristic 03
 order: 3
 lead: >-
   Performance efficiency is how well software performs under a given
@@ -19,7 +18,7 @@ cta_text: Book a 30-minute discovery call to see how security can run in your pi
 
 ## What performance efficiency means
 
-ISO/IEC 5055 defines performance efficiency through three characteristics:
+Performance efficiency shows up in three characteristics:
 
 - **Time behaviour** — response and processing times meet requirements
 - **Resource utilisation** — the amounts and types of resources used are proportionate

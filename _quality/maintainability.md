@@ -1,10 +1,9 @@
 ---
 title: Maintainability
 description: >-
-  Maintainability is one of the four software quality characteristics of
-  ISO/IEC 5055. What it means, why it makes your product more secure, and
-  how Scandinavian Dev helps you get there.
-eyebrow: ISO/IEC 5055 quality characteristic 01
+  What maintainability really means, why it makes your product more
+  secure, and how Scandinavian Dev helps you get there.
+eyebrow: Quality characteristic 01
 order: 1
 lead: >-
   Maintainability is the ease with which software can be analysed, modified
@@ -18,7 +17,7 @@ cta_text: Book a 30-minute discovery call to see how maintainable your codebase 
 
 ## What maintainability means
 
-ISO/IEC 5055 defines maintainability through five characteristics:
+Maintainability shows up in five concrete characteristics:
 
 - **Modularity** — the codebase is composed of discrete, independent parts
 - **Reusability** — existing assets can be used again in other systems

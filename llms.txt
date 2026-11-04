@@ -2,7 +2,7 @@
 
 > Scandinavian Dev helps European product teams build quality software that is secure by design. Founded in 2019 by Stephan Kaas Johansen (CTO background, fractional CISO, DTU-educated engineer), based in Skara, Sweden. We upskill the engineers you already have — not consultants you can't find.
 
-All four quality characteristics of ISO/IEC 5055 — maintainability, security, performance efficiency and reliability — share one goal: better software. The goal of security is resilience: software that keeps working, even under attack. We work in the age of AI: readable, well-structured code is what your engineers and their AI tools can safely build, review and maintain together. CRA-ready security is framed as an opportunity: a ticket to sell connected products across the entire EU market, not a burden. Services: product security training, security champions programmes, tabletop exercises, fractional CISO and security due diligence.
+The four quality characteristics of software — maintainability, security, performance efficiency and reliability — share one goal: better software. The goal of security is resilience: software that keeps working, even under attack. We work in the age of AI: readable, well-structured code is what your engineers and their AI tools can safely build, review and maintain together. CRA-ready security is framed as an opportunity: a ticket to sell connected products across the entire EU market, not a burden. Services: product security training, security champions programmes, tabletop exercises, fractional CISO and security due diligence.
 
 ## Site
 
@@ -12,8 +12,8 @@ All four quality characteristics of ISO/IEC 5055 — maintainability, security, 
 
 ## Quality parameters
 
-- [Maintainability](https://scandinavian.dev/quality/maintainability/): What maintainability means in ISO/IEC 5055 (modularity, reusability, analysability, modifiability, testability), why unmaintainable code is unpatchable code, and the AI angle: readable code is what engineers and their AI tools can secure together.
-- [Security](https://scandinavian.dev/quality/security/): The five security characteristics of ISO/IEC 5055, why the goal of security is resilience, and how the EU Cyber Resilience Act opens the EU market.
+- [Maintainability](https://scandinavian.dev/quality/maintainability/): What maintainability means (modularity, reusability, analysability, modifiability, testability), why unmaintainable code is unpatchable code, and the AI angle: readable code is what engineers and their AI tools can secure together.
+- [Security](https://scandinavian.dev/quality/security/): The five security characteristics (confidentiality, integrity, non-repudiation, accountability, authenticity), why the goal of security is resilience, and how the EU Cyber Resilience Act opens the EU market.
 - [Performance Efficiency](https://scandinavian.dev/quality/performance-efficiency/): Time behaviour, resource utilisation and capacity — and why the discipline behind fast software also keeps vulnerabilities out.
 - [Reliability](https://scandinavian.dev/quality/reliability/): Maturity, availability, fault tolerance and recoverability — resilience as a quality you can rehearse and document.
 

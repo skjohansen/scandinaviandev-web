@@ -1,10 +1,9 @@
 ---
 title: Reliability
 description: >-
-  Reliability is one of the four software quality characteristics of
-  ISO/IEC 5055. Reliable systems assume things will fail and plan for it —
-  resilience is a quality you can rehearse.
-eyebrow: ISO/IEC 5055 quality characteristic 04
+  Reliable systems assume things will fail and plan for it — resilience
+  is a quality you can rehearse.
+eyebrow: Quality characteristic 04
 order: 4
 lead: >-
   Reliability is how well a system keeps performing its intended functions,
@@ -19,7 +18,7 @@ cta_text: Book a 30-minute discovery call to design your first tabletop exercise
 
 ## What reliability means
 
-ISO/IEC 5055 defines reliability through four characteristics:
+Reliability shows up in four characteristics:
 
 - **Maturity** — the system meets needs for reliability under normal operation
 - **Availability** — the system is operational and usable when needed

@@ -1,10 +1,9 @@
 ---
 title: Security
 description: >-
-  Security is one of the four software quality characteristics of ISO/IEC
-  5055. The goal of security is resilience — and with the EU Cyber
-  Resilience Act, it is your ticket to the European market.
-eyebrow: ISO/IEC 5055 quality characteristic 02
+  The goal of security is resilience — and with the EU Cyber Resilience
+  Act, it is your ticket to the European market.
+eyebrow: Quality characteristic 02
 order: 2
 lead: >-
   Security is the degree to which a product protects information and data,
@@ -20,7 +19,7 @@ cta_text: Book a 30-minute discovery call to map your security posture and CRA r
 
 ## What security means
 
-ISO/IEC 5055 defines security through five characteristics:
+In practice, security comes down to five characteristics:
 
 - **Confidentiality** — data is only accessible to those with the right to see it
 - **Integrity** — data and system behaviour cannot be tampered with
