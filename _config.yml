@@ -49,10 +49,14 @@ permalink: pretty
 markdown: kramdown
 
 # Offerings: one file per offering in _offerings/, sorted by `order`
+# Quality parameters: one ISO/IEC 5055 information page per characteristic
 collections:
   offerings:
     output: true
     permalink: /offerings/:name/
+  quality:
+    output: true
+    permalink: /quality/:name/
 
 plugins:
   - jekyll-seo-tag
@@ -70,6 +74,11 @@ defaults:
       type: offerings
     values:
       layout: offering
+  - scope:
+      path: ""
+      type: quality
+    values:
+      layout: quality
 
 exclude:
   - Gemfile

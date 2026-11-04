@@ -10,6 +10,13 @@ All four quality characteristics of ISO/IEC 5055 — maintainability, security, 
 - [Offerings](https://scandinavian.dev/offerings/): The five offerings, one path — foundation, people, practice, governance, growth.
 - [About & contact](https://scandinavian.dev/contact/): The founder's story, contact details and legal information (Nonsultant AB, trading as Scandinavian dev).
 
+## Quality parameters
+
+- [Maintainability](https://scandinavian.dev/quality/maintainability/): What maintainability means in ISO/IEC 5055 (modularity, reusability, analysability, modifiability, testability), why unmaintainable code is unpatchable code, and the AI angle: readable code is what engineers and their AI tools can secure together.
+- [Security](https://scandinavian.dev/quality/security/): The five security characteristics of ISO/IEC 5055, why the goal of security is resilience, and how the EU Cyber Resilience Act opens the EU market.
+- [Performance Efficiency](https://scandinavian.dev/quality/performance-efficiency/): Time behaviour, resource utilisation and capacity — and why the discipline behind fast software also keeps vulnerabilities out.
+- [Reliability](https://scandinavian.dev/quality/reliability/): Maturity, availability, fault tolerance and recoverability — resilience as a quality you can rehearse and document.
+
 ## Offerings
 
 - [Product Security Engineering Training](https://scandinavian.dev/offerings/product-security-engineering/): Core offering — turn the developers you have into Product Security Engineers who own security from first sketch to deployment. Security by design for SaaS and embedded products, AI-assisted threat modeling, GDPR/NIS2/AI Act ready.

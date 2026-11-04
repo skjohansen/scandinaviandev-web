@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{%- comment -%}
+  One template for every ISO/IEC 5055 quality parameter page.
+  Content comes from the front matter and body in _quality/<name>.md.
+  `offerings` is a list of offering slugs (filenames in _offerings/).
+{%- endcomment -%}
+
+<article class="section quality-page">
+  <div class="container">
+    <div class="quality-page__text">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+
+      {{ content }}
+
+      <h2 class="label">How we help</h2>
+      <ul class="quality-page__offerings" role="list">
+        {%- for slug in page.offerings -%}
+          {%- assign o = site.offerings | where: "slug", slug | first -%}
+          <li>
+            <article class="offer-card">
+              <h3 class="offer-card__title"><a href="{{ o.url | relative_url }}">{{ o.title }}</a></h3>
+              <p class="offer-card__tag">{{ o.card_tag }}</p>
+              <p>{{ o.card_text }}</p>
+            </article>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</article>
+
+{% include cta.html title=page.cta_title text=page.cta_text %}
