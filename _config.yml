@@ -49,7 +49,7 @@ permalink: pretty
 markdown: kramdown
 
 # Offerings: one file per offering in _offerings/, sorted by `order`
-# Quality parameters: one ISO/IEC 5055 information page per characteristic
+# Quality parameters: one information page per quality characteristic
 collections:
   offerings:
     output: true
