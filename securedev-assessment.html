@@ -88,10 +88,12 @@ sitemap: false
   .assessment__fill {
     height: 100%;
     width: 0;
-    background: var(--c-primary);
     border-radius: 999px;
     transition: width .8s ease-out;
   }
+  .assessment__fill--red    { background: #DC2626; }  /* below 50%      */
+  .assessment__fill--yellow { background: #F59E0B; }  /* 50% to 75%     */
+  .assessment__fill--green  { background: #16A34A; }  /* 76% and above  */
   .assessment__note { color: var(--c-muted); font-size: var(--fs-sm); margin: 0; }
   .assessment__book { margin-top: var(--space-5); }
   .assessment__book h2 { font-size: var(--fs-h2); }
@@ -115,6 +117,9 @@ sitemap: false
       var rounded = Math.round(result);
       document.getElementById('assessment-score').textContent = rounded;
       var fill = document.getElementById('assessment-fill');
+      fill.classList.add(rounded < 50 ? 'assessment__fill--red'
+        : rounded <= 75 ? 'assessment__fill--yellow'
+        : 'assessment__fill--green');
       requestAnimationFrame(function () { fill.style.width = rounded + '%'; });
       card.setAttribute('aria-valuenow', String(rounded));
       var note = document.getElementById('assessment-note');
