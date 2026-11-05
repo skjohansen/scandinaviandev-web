@@ -1,0 +1,143 @@
+---
+title: Secure Development Assessment — Your Result
+description: >-
+  Your Secure Development assessment result. See your score and book a free
+  walkthrough of the full report with Scandinavian Dev.
+permalink: /securedev-assessment/
+sitemap: false
+---
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign c = site.contact -%}
+
+<section class="section assessment">
+  <div class="container" style="max-width: var(--content);">
+    <div class="about__text">
+      <p class="eyebrow">Secure Development Assessment</p>
+      <h1 id="assessment-title">Your result</h1>
+      <p class="lead lead--strong" id="assessment-lead">
+        Thank you for completing the assessment. Here is the overall score for
+        your organisation's Secure Development level.
+      </p>
+    </div>
+
+    <div class="assessment__card" id="assessment-card" hidden>
+      <p class="assessment__label">Overall Secure Development score</p>
+      <p class="assessment__score"><span id="assessment-score">0</span><span class="assessment__unit">%</span></p>
+      <div class="assessment__bar" role="progressbar" aria-labelledby="assessment-score" aria-valuemin="0" aria-valuemax="100">
+        <div class="assessment__fill" id="assessment-fill"></div>
+      </div>
+      <p class="assessment__note" id="assessment-note"></p>
+    </div>
+
+    <div class="assessment__card" id="assessment-missing" hidden>
+      <p class="lead">We could not read your assessment result.</p>
+      <p class="assessment__note">
+        Please return to your assessment and open the result link again, or
+        reach out at <a href="mailto:{{ c.email }}">{{ c.email }}</a>.
+      </p>
+    </div>
+
+    <hr class="divider divider--compact">
+
+    <div class="assessment__book">
+      <h2>Get a walkthrough of your full result</h2>
+      <p>
+        The score above is only the headline. Book a free 30-minute call and we
+        will walk you through the full report — what is strong, where the gaps
+        are, and the most effective next steps for your team.
+      </p>
+      <a class="btn btn--primary btn--lg" id="assessment-book"
+         href="{{ site.calendly_url }}" target="_blank" rel="noopener">
+        {{ t.schedule_calendly | default: 'Book a walkthrough' }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .assessment__card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    margin-top: var(--space-5);
+  }
+  .assessment__label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--c-subtle);
+    margin: 0 0 var(--space-2);
+  }
+  .assessment__score {
+    font-size: clamp(2.5rem, 1.5rem + 4vw, 4rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.1;
+    margin: 0;
+  }
+  .assessment__unit { font-size: 0.5em; font-weight: 700; color: var(--c-muted); margin-left: 0.1em; }
+  .assessment__bar {
+    height: 12px;
+    background: var(--c-border);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: var(--space-4) 0;
+  }
+  .assessment__fill {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    transition: width .8s ease-out;
+  }
+  .assessment__fill--red    { background: #DC2626; }  /* below 50%      */
+  .assessment__fill--yellow { background: #F59E0B; }  /* 50% to 75%     */
+  .assessment__fill--green  { background: #16A34A; }  /* 76% and above  */
+  .assessment__note { color: var(--c-muted); font-size: var(--fs-sm); margin: 0; }
+  .assessment__book { margin-top: var(--space-5); }
+  .assessment__book h2 { font-size: var(--fs-h2); }
+</style>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var resultRaw = params.get('result');
+    var id = params.get('assessmentId');
+
+    var result = resultRaw === null ? NaN : Number(resultRaw);
+    var valid = !isNaN(result) && result >= 0 && result <= 100;
+
+    var card = document.getElementById('assessment-card');
+    var missing = document.getElementById('assessment-missing');
+    var book = document.getElementById('assessment-book');
+
+    if (valid) {
+      card.hidden = false;
+      var rounded = Math.round(result);
+      document.getElementById('assessment-score').textContent = rounded;
+      var fill = document.getElementById('assessment-fill');
+      fill.classList.add(rounded < 50 ? 'assessment__fill--red'
+        : rounded <= 75 ? 'assessment__fill--yellow'
+        : 'assessment__fill--green');
+      requestAnimationFrame(function () { fill.style.width = rounded + '%'; });
+      card.setAttribute('aria-valuenow', String(rounded));
+      var note = document.getElementById('assessment-note');
+      note.textContent = rounded >= 80
+        ? 'A strong result. A walkthrough will show you where to keep raising the bar.'
+        : rounded >= 50
+          ? 'A solid foundation. A walkthrough will show the fastest ways to improve.'
+          : 'There is clear room to grow. A walkthrough will show you where to start.';
+    } else {
+      missing.hidden = false;
+    }
+
+    // Pass the assessment id to Calendly as "a2" so the walkthrough can be tied to the report.
+    var base = '{{ site.calendly_url }}';
+    if (id) {
+      var url = new URL(base, window.location.origin);
+      url.searchParams.set('a2', id);
+      book.href = url.toString();
+    }
+  })();
+</script>
