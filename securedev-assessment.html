@@ -5,6 +5,7 @@ description: >-
   walkthrough of the full report with Scandinavian Dev.
 permalink: /securedev-assessment/
 sitemap: false
+assessment_average: 62   # average score of previous assessments, 0-100 (edit manually)
 ---
 {%- assign t = site.data.i18n[site.lang] -%}
 {%- assign c = site.contact -%}
@@ -27,6 +28,14 @@ sitemap: false
         <div class="assessment__fill" id="assessment-fill"></div>
       </div>
       <p class="assessment__note" id="assessment-note"></p>
+
+      <div class="assessment__avg">
+        <p class="assessment__label">Average of all previous assessments</p>
+        <div class="assessment__bar assessment__bar--avg" role="progressbar" aria-labelledby="assessment-avg-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ page.assessment_average }}">
+          <div class="assessment__fill assessment__fill--blue" id="assessment-avg-fill"></div>
+        </div>
+        <p class="assessment__note"><span id="assessment-avg-label">{{ page.assessment_average }}</span>% — the average score across all previous assessments.</p>
+      </div>
     </div>
 
     <div class="assessment__card" id="assessment-missing" hidden>
@@ -91,10 +100,13 @@ sitemap: false
     border-radius: 999px;
     transition: width .8s ease-out;
   }
+  .assessment__fill--blue { background: var(--c-primary); }  /* average bar */
   .assessment__fill--red    { background: #DC2626; }  /* below 50%      */
   .assessment__fill--yellow { background: #F59E0B; }  /* 50% to 75%     */
   .assessment__fill--green  { background: #16A34A; }  /* 76% and above  */
   .assessment__note { color: var(--c-muted); font-size: var(--fs-sm); margin: 0; }
+  .assessment__avg { margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--c-border); }
+  .assessment__avg .assessment__bar { margin: var(--space-3) 0 var(--space-2); }
   .assessment__book { margin-top: var(--space-5); }
   .assessment__book h2 { font-size: var(--fs-h2); }
 </style>
@@ -130,6 +142,13 @@ sitemap: false
           : 'There is clear room to grow. A walkthrough will show you where to start.';
     } else {
       missing.hidden = false;
+    }
+
+    // Average of previous assessments (manual front-matter variable), always blue.
+    var avg = Math.round(Number('{{ page.assessment_average }}'));
+    if (!isNaN(avg)) {
+      var avgFill = document.getElementById('assessment-avg-fill');
+      requestAnimationFrame(function () { avgFill.style.width = Math.min(Math.max(avg, 0), 100) + '%'; });
     }
 
     // Pass the assessment id to Calendly as "a2" so the walkthrough can be tied to the report.
